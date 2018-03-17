@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Conscious</string>
+    <string name="app_logo_please">I need an app logo please as well as some color : )</string>
+    <string name="userName">username</string>
+    <string name="password">password</string>
+    <string name="register">Not already a user? Sign up to register</string>
+    <string name="login">login</string>
+    <string name="sign_up">sign Up</string>
 </resources>
