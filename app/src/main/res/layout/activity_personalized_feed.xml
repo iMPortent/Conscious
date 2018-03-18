@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/color_background"
-    tools:context="com.example.c4q.conscious.splash.SplashActivity">
+    tools:context="com.example.c4q.conscious.PersonalizedFeedActivity">
 
-    <ImageView
-    android:id="@+id/splash_logo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/brain_logo"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pfeed_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

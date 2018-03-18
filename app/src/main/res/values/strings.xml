@@ -6,4 +6,8 @@
     <string name="register">Not already a user? Sign up to register</string>
     <string name="login">login</string>
     <string name="sign_up">sign Up</string>
+    <string name="remember_check_bx">Remember Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
