@@ -1,4 +1,4 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.views.activities;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.SlidingFragment;
 
 /**

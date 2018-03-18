@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "192732081005",
+    "firebase_url": "https://conscious-ed57a.firebaseio.com",
+    "project_id": "conscious-ed57a",
+    "storage_bucket": "conscious-ed57a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192732081005:android:c98961636ce8f49a",
+        "android_client_info": {
+          "package_name": "com.example.c4q.conscious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192732081005-hfk5dbv11l2abgnqe82g4kghljvheqfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.c4q.conscious",
+            "certificate_hash": "76054036f7bc1e25b55cd0d0643318390c82a940"
+          }
+        },
+        {
+          "client_id": "192732081005-emtn246vfl2hbipiacb3a1f5d85u351u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6HZPgQNTz0F-6AUx39YO3GNDGvo4MWbc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192732081005-emtn246vfl2hbipiacb3a1f5d85u351u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
