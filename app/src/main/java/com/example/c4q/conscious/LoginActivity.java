@@ -40,10 +40,7 @@ public class LoginActivity extends Activity {
             user_name.setText(login.getString("username", user_name.getText().toString()));
             password.setText(login.getString("password", password.getText().toString()));
             rememberMe.setChecked(login.getBoolean("isChecked", true));
-
         }
-
-
 
 
         login_btn.setOnClickListener(new View.OnClickListener() {
