@@ -3,14 +3,25 @@ package com.example.c4q.conscious;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+<<<<<<< Updated upstream
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+=======
+>>>>>>> Stashed changes
+import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends Activity {
 
@@ -22,12 +33,14 @@ public class LoginActivity extends Activity {
     private ImageView login_icon;
     private Button login_btn;
     private Button registration_btn;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mAuth = FirebaseAuth.getInstance();
         login_icon = findViewById(R.id.login_icon);
         login_btn = findViewById(R.id.login_btn);
         registration_btn = findViewById(R.id.registration_btn);
@@ -46,25 +59,24 @@ public class LoginActivity extends Activity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(user_name.getText().toString().equals("")) {
-                    Toast.makeText(LoginActivity.this, "please enter a valid username", Toast.LENGTH_LONG).show();
-                }
-                if(password.getText().toString().equals("")){
-                    Toast.makeText(LoginActivity.this, "please enter a valid password", Toast.LENGTH_LONG).show();
-                }
-                if(!user_name.getText().toString().equals("")
-                        && !password.getText().toString().equals("")
-                        && !password.getText().toString().contains(user_name.getText().toString())){
-                    SharedPreferences.Editor editor = login.edit();
-                    editor.clear();
-                    editor.putString("username", user_name.getText().toString());
-                    editor.putString("userpassword", password.getText().toString());
-                    editor.apply();
+                mAuth.signInWithEmailAndPassword(user_name.getText().toString(), password.getText().toString())
+                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d("TAG", "signInWithEmail:success");
+                                    Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
+                                    intent.putExtra("username", user_name.getText().toString());
+                                    startActivity(intent);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w("TAG", "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(LoginActivity.this, "Authentication failed.",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
 
-                    Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
-                    intent.putExtra("username", user_name.getText().toString());
-                    startActivity(intent);
-                }
             }
         });
 
