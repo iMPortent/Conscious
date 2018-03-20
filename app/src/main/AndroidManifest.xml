@@ -30,7 +30,6 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".PersonalizedFeedActivity" />
         <activity android:name=".OnboardingActivity" />
-        <activity android:name=".ScreenSlidePagerActivity"/>
     </application>
 
 </manifest>
