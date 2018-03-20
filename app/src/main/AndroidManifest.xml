@@ -26,11 +26,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".PersonalizedFeedActivity" />
-        <activity android:name=".OnboardingActivity" />
-        <activity android:name=".ScreenSlidePagerActivity"/>
+        <activity android:name=".views.activities.LoginActivity" />
+        <activity android:name=".views.activities.RegistrationActivity" />
+        <activity android:name=".views.activities.PersonalizedFeedActivity" />
+        <activity android:name=".views.activities.OnboardingActivity" />
+        <activity android:name=".views.activities.ScreenSlidePagerActivity"/>
     </application>
 
 </manifest>

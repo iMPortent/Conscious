@@ -1,13 +1,9 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.views.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-<<<<<<< Updated upstream
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-=======
->>>>>>> Stashed changes
+
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.c4q.conscious.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -55,7 +52,6 @@ public class LoginActivity extends Activity {
             rememberMe.setChecked(login.getBoolean("isChecked", true));
 
         }
-
 
 
 
