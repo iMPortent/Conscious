@@ -2,12 +2,10 @@ package com.example.c4q.conscious.splash;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.c4q.conscious.LoginActivity;
+import com.example.c4q.conscious.views.activities.LoginActivity;
 import com.example.c4q.conscious.R;
 
 public class SplashActivity extends Activity {
