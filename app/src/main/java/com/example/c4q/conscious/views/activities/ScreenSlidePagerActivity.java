@@ -1,4 +1,4 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.views.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -7,6 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.fragments.CommunityFragment;
+import com.example.c4q.conscious.views.fragments.IncentiveFragment;
+import com.example.c4q.conscious.views.fragments.SlidingFragment;
+import com.example.c4q.conscious.views.fragments.SmartFragment;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
 
@@ -14,13 +19,17 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
     /**
      * The number of pages (wizard steps) to show in this demo.
      */
-    private static final int NUM_PAGES = 5;
-
     /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous
      * and next wizard steps.
      */
     private ViewPager mPager;
+    private Fragment[] pages = {
+            new CommunityFragment(),
+            new SmartFragment(),
+            new IncentiveFragment(),
+            new SlidingFragment()
+    };
 
     /**
      * The pager adapter, which provides the pages to the view pager widget.
@@ -30,12 +39,11 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_screen_slide_pager);
+        setContentView(R.layout.fragment_view_pager);
 
             // Instantiate a ViewPager and a PagerAdapter.
             mPager = findViewById(R.id.pager);
-            mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
-            mPager.setAdapter(mPagerAdapter);
+            mPager.setAdapter(new ScreenSlidePagerAdapter(getSupportFragmentManager()));
         }
 
         @Override
@@ -61,12 +69,12 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
 
             @Override
             public Fragment getItem(int position) {
-                return new Fragment();
+                return pages[position];
             }
 
             @Override
             public int getCount() {
-                return NUM_PAGES;
+                return pages.length;
             }
     }
 }

@@ -1,11 +1,13 @@
 package com.example.c4q.conscious.views.activities;
 
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
+import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     TextView textView;
+    MaterialViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         //value
         myRef.setValue("Hey");
 
+        mViewPager = (MaterialViewPager) findViewById(R.id.materialViewPager);
 
         //
         myRef.addValueEventListener(new ValueEventListener() {
