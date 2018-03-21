@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.c4q.conscious.PersonalizedFeedActivity">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.c4q.conscious.views.activities.PersonalizedFeedActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/pfeed_recycler_view"
+    <com.github.florent37.materialviewpager.MaterialViewPager
+        android:id="@+id/materialViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:viewpager_logo="@layout/header_logo"
+        app:viewpager_logoMarginTop="60dp"
+        app:viewpager_color="@color/colorPrimaryDark"
+        app:viewpager_headerHeight="200dp"
+        app:viewpager_headerAlpha="1.0"
+        app:viewpager_hideLogoWithFade="false"
+        app:viewpager_hideToolbarAndTitle="true"
+        app:viewpager_enableToolbarElevation="true"
+        app:viewpager_parallaxHeaderFactor="2.5"
+        app:viewpager_headerAdditionalHeight="20dp"
+        app:viewpager_displayToolbarWhenSwipe="true"
+        app:viewpager_transparentToolbar="true"
+        app:viewpager_animatedHeaderImage="true"
+        app:viewpager_disableToolbar="false">
 
-    </android.support.v7.widget.RecyclerView>
 
-</android.support.constraint.ConstraintLayout>
+    </com.github.florent37.materialviewpager.MaterialViewPager>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pfeed_card_view1"
+        android:layout_width="345dp"
+        android:layout_height="87dp"
+        android:background="@color/colorBackground"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="257dp">
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+
+
