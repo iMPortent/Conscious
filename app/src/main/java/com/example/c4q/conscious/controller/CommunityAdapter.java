@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.model.Events;
 import com.example.c4q.conscious.model.EventsModel;
+import com.example.c4q.conscious.views.fragments.CommunityFragment;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     public ArrayList<Events> eventsList;
 
-    public CommunityAdapter(){
+    public CommunityAdapter(CommunityFragment communityFragment, ArrayList<Events> eventsList){
         this.eventsList = new ArrayList<>();
     }
 
@@ -29,7 +30,7 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     @Override
     public CommunityViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.community_item_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.community_fragment, parent, false);
         return new CommunityViewHolder(view);
     }
 

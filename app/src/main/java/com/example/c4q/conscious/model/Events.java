@@ -2,9 +2,6 @@ package com.example.c4q.conscious.model;
 
 import java.util.ArrayList;
 
-/**
- * Created by C4Q on 3/20/18.
- */
 
 public class Events {
 
@@ -20,5 +17,15 @@ public class Events {
 
     public void setEventResults(ArrayList<EventsModel> eventResults) {
         this.eventResults = eventResults;
+    }
+
+    public static ArrayList<EventsModel> createContactsList(int numEvents) {
+        ArrayList<EventsModel> events = new ArrayList<EventsModel>();
+
+        for (int i = 1; i <= numEvents; i++) {
+            events.add(new EventsModel());
+        }
+
+        return events;
     }
 }
