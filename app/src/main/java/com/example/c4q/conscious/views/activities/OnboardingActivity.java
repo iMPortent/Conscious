@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.fragments.CommunityFragment;
 
 public class OnboardingActivity extends Activity {
 
@@ -49,7 +50,7 @@ public class OnboardingActivity extends Activity {
                 /**
                  * Must save user input into the database.
                  */
-                Intent intentToRegistration = new Intent(OnboardingActivity.this, ScreenSlidePagerActivity.class);
+                Intent intentToRegistration = new Intent(OnboardingActivity.this, MainActivity.class);
                 startActivity(intentToRegistration);
             }
         });
