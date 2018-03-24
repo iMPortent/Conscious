@@ -1,30 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.c4q.conscious.views.activities.MainActivity">
 
-    <com.github.florent37.materialviewpager.MaterialViewPager
-        android:id="@+id/materialViewPager"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:viewpager_logo="@layout/header_logo"
-        app:viewpager_logoMarginTop="100dp"
-        app:viewpager_color="@color/colorPrimary"
-        app:viewpager_headerHeight="200dp"
-        app:viewpager_headerAlpha="1.0"
-        app:viewpager_hideLogoWithFade="false"
-        app:viewpager_hideToolbarAndTitle="true"
-        app:viewpager_enableToolbarElevation="true"
-        app:viewpager_parallaxHeaderFactor="1.5"
-        app:viewpager_headerAdditionalHeight="20dp"
-        app:viewpager_displayToolbarWhenSwipe="true"
-        app:viewpager_transparentToolbar="true"
-        app:viewpager_animatedHeaderImage="true"
-        app:viewpager_disableToolbar="false"
+        android:layout_above="@+id/navigation"
+        android:animateLayoutChanges="true">
 
-        />
+    </FrameLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#A7E0AF"
+        app:itemIconTint="#000"
+        app:itemTextColor="@color/cardview_dark_background"
+        app:menu="@menu/bottom_nav_view"/>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/comm_frag_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="CommunityFragment"
+        android:gravity="center" />
+
+
+</RelativeLayout>

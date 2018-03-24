@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.c4q.conscious.RegistrationActivity">
+    tools:context="com.example.c4q.conscious.views.activities.RegistrationActivity">
 
     <EditText
         android:id="@+id/username_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:hint="username" />
+        android:layout_marginTop="100dp"/>
 
     <EditText
         android:id="@+id/password_et"

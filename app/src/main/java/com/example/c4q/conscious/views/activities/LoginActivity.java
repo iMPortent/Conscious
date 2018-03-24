@@ -1,4 +1,4 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.views.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.example.c4q.conscious.R;
 
 public class LoginActivity extends Activity {
 
@@ -47,8 +48,11 @@ public class LoginActivity extends Activity {
             user_name.setText(login.getString("username", user_name.getText().toString()));
             password.setText(login.getString("password", password.getText().toString()));
             rememberMe.setChecked(login.getBoolean("isChecked", true));
-        }
 
+            /**Please make remember me check box ensure that it saves the login credentials for next use, might need database
+             * or might need shared prefs or authentication?
+             */
+        }
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override

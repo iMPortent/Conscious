@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.c4q.conscious.OnboardingActivity">
+    tools:context="com.example.c4q.conscious.views.activities.OnboardingActivity">
 
     <TextView
         android:id="@+id/welcome_user_tv"
@@ -26,7 +26,8 @@
         android:id="@+id/question_one_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:textColor="#000"/>
 
 
     <TextView
@@ -42,7 +43,8 @@
         android:id="@+id/question_two_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:textColor="#000"/>
 
     <TextView
         android:id="@+id/question_three"
@@ -58,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textColor="#000"
          />
 
     <Button

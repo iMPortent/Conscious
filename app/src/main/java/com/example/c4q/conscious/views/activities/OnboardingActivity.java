@@ -1,14 +1,16 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.views.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.fragments.CommunityFragment;
 
 public class OnboardingActivity extends Activity {
 
@@ -48,7 +50,7 @@ public class OnboardingActivity extends Activity {
                 /**
                  * Must save user input into the database.
                  */
-                Intent intentToRegistration = new Intent(OnboardingActivity.this, PersonalizedFeedActivity.class);
+                Intent intentToRegistration = new Intent(OnboardingActivity.this, MainActivity.class);
                 startActivity(intentToRegistration);
             }
         });
