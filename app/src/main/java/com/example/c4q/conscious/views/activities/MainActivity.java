@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.navigation);
-        ViewPager viewPager = findViewById(R.id.vpPager);
+        ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(new vPagerAdapter(getSupportFragmentManager(),
                 MainActivity.this));
 
