@@ -27,7 +27,13 @@ public class vPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return CommunityFragment.newInstance(1, "CommunityFragment");
+        switch(position) {
+
+            case 0: return CommunityFragment.newInstance(1,"CommunityFragment");
+            case 1: return IncentiveFragment.newInstance(2,"IncentiveFragment");
+            case 2: return SmartFragment.newInstance(3,"SmartFragment");
+            default: return CommunityFragment.newInstance(1,"CommuinityFragment");
+        }
     }
 
     @Override
