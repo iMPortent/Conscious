@@ -31,9 +31,6 @@ import java.util.ArrayList;
 public class CommunityFragment extends Fragment {
 
     public static final String ARG_PAGE = "ARG_PAGE";
-    private RecyclerView recyclerView;
-
-    private int mPage;
 
     public static CommunityFragment newInstance(int page, String title) {
         Bundle args = new Bundle();
@@ -47,14 +44,14 @@ public class CommunityFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
+        int mPage = getArguments().getInt(ARG_PAGE);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.community_fragment, container, false);
-        recyclerView = view.findViewById(R.id.community_recycler_view);
+        RecyclerView recyclerView = view.findViewById(R.id.community_recycler_view);
         return view;
 
     }
