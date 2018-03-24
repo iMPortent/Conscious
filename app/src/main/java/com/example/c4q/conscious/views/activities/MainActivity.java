@@ -60,11 +60,9 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.home:
                                 selectedFragment = CommunityFragment.newInstance(1, "CommunityFragment" );
                                 break;
-
                             case R.id.smart:
                                 selectedFragment = SmartFragment.newInstance(2, "SmartFragment");
                                 break;
-
                             case R.id.incentive:
                                 selectedFragment = IncentiveFragment.newInstance(3, "IncentivesFragment");
                                 break;

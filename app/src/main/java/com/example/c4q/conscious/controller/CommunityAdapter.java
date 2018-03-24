@@ -1,13 +1,11 @@
 package com.example.c4q.conscious.controller;
 
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.model.Events;
 import com.example.c4q.conscious.model.EventsModel;
@@ -17,14 +15,16 @@ import java.util.ArrayList;
 
 public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.CommunityViewHolder> {
 
-    public ArrayList<Events> eventsList;
+    /** Be sure to set one top level list and only access it from the adapter. **/
+
+    private ArrayList<Events> eventList;
 
     public CommunityAdapter(CommunityFragment communityFragment, ArrayList<Events> eventsList){
-        this.eventsList = new ArrayList<>();
+        this.eventList = new ArrayList<>();
     }
 
     public CommunityAdapter(ArrayList<Events> eventsList) {
-        this.eventsList = eventsList;
+        this.eventList = eventsList;
         notifyDataSetChanged();
     }
 
@@ -36,13 +36,13 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     @Override
     public void onBindViewHolder(CommunityViewHolder holder, int position) {
-        Events events = eventsList.get(position);
+        Events events = eventList.get(position);
         holder.onBind(events.getEventResults().get(position));
     }
 
     @Override
     public int getItemCount() {
-        return eventsList.size();
+        return eventList.size();
     }
 
     public class CommunityViewHolder extends RecyclerView.ViewHolder {
