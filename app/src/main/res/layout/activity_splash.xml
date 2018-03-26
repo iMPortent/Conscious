@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/color_background"
     tools:context="com.example.c4q.conscious.splash.SplashActivity">
 
     <ImageView
     android:id="@+id/splash_logo"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/brain_logo"/>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wellness_tracker_logo"/>
 
 </android.support.constraint.ConstraintLayout>
