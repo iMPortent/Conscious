@@ -2,11 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFragBackground"
-    tools:context="com.example.c4q.conscious.views.fragments.SlidingFragment">
+    tools:context="com.example.c4q.conscious.views.fragments.GoodieBagFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <!-- TODO: Animations for viewpager scrolling -->
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

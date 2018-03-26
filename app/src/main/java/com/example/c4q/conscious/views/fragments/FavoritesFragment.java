@@ -12,9 +12,10 @@ import com.example.c4q.conscious.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ViewPagerFragment extends Fragment {
+public class FavoritesFragment extends Fragment {
 
-    public ViewPagerFragment() {
+
+    public FavoritesFragment() {
         // Required empty public constructor
     }
 
@@ -23,11 +24,7 @@ public class ViewPagerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.fragment_view_pager, container, false);
-
-        return rootView;
-
+        return inflater.inflate(R.layout.fragment_favorites, container, false);
     }
 
 }

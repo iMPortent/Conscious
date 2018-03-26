@@ -27,7 +27,6 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".views.activities.LoginActivity" />
         <activity android:name=".views.activities.OnboardingActivity" />
-        <activity android:name=".views.activities.ScreenSlidePagerActivity"></activity>
     </application>
 
 </manifest>
