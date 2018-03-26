@@ -19,7 +19,7 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     public ArrayList<Events> eventsList;
 
-    public CommunityAdapter(CommunityFragment communityFragment, ArrayList<Events> eventsList){
+    public CommunityAdapter(){
         this.eventsList = new ArrayList<>();
     }
 

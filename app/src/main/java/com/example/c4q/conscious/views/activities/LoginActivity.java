@@ -117,7 +117,7 @@ public class LoginActivity extends Activity {
     }
 
     public static boolean isEmail(String email, Context context){
-        if(email.contains("@") && email.contains(".")){
+        if(email.contains("@") && email.contains(".") && email.length() > 4){
             return true;
         } else {
             Toast.makeText(context, "Enter a valid email address!",Toast.LENGTH_SHORT).show();

@@ -15,8 +15,10 @@ public class SmartFragment extends Fragment {
     private int page;
 
     // newInstance constructor for creating fragment with arguments
-    public static CommunityFragment newInstance(int page, String title) {
-        CommunityFragment fragmentFirst = new CommunityFragment();
+
+    //returned community
+    public static SmartFragment newInstance(int page, String title) {
+        SmartFragment fragmentFirst = new SmartFragment();
         Bundle args = new Bundle();
         args.putInt("someInt", page);
         args.putString("someTitle", title);
