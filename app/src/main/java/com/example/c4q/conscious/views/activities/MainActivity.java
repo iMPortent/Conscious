@@ -1,11 +1,14 @@
 package com.example.c4q.conscious.views.activities;
 
+import android.graphics.Color;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +20,7 @@ import com.example.c4q.conscious.views.fragments.IncentiveFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 public class MainActivity extends FragmentActivity {
 
@@ -69,11 +73,11 @@ public class MainActivity extends FragmentActivity {
 
 
     private void setupTabIcons(){
-            vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
-            vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
-            vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-            vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
-            vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+        vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
+        vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
+        vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
+        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
 
 
     }
