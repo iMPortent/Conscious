@@ -11,63 +11,30 @@
         android:id="@+id/welcome_user_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        tools:text="Welcome user, please answer questions."/>
-
-    <TextView
-        android:id="@+id/question_one"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="How was your day?"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
         />
 
-    <EditText
-        android:id="@+id/question_one_et"
+    <TextView
+        android:id="@+id/disclaimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="#000"/>
-
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="center"
+        android:text="@string/disclaimer" />
 
     <TextView
-        android:id="@+id/question_two"
+        android:id="@+id/disclaimer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Are you excited for your plans for today?"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="195dp"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="center"
+        android:text="@string/disclaimer2" />
 
-    <EditText
-        android:id="@+id/question_two_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="#000"/>
-
-    <TextView
-        android:id="@+id/question_three"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="What do you want to do today?"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="357dp"
-        android:layout_marginTop="65dp"/>
-
-    <EditText
-        android:id="@+id/question_three_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textColor="#000"
-         />
-
-    <Button
-        android:id="@+id/sumbit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:text="submit"/>
 
 </LinearLayout>
