@@ -27,11 +27,11 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.community_dummy,
-            R.drawable.smart_dummy,
-            R.drawable.incentives_dummy,
-            R.drawable.goodie_bag_dummy,
-            R.drawable.favorite
+            R.drawable.community_dummy_icon,
+            R.drawable.smart_dummy_icon,
+            R.drawable.incentive_dummy_icon,
+            R.drawable.goodie_bag_dummy_icon,
+            R.drawable.favorites_dummy_icon
     };
 
 
