@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.views.fragments;
+package com.example.c4q.conscious.views.activities;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.fragments.CommunityFragment;
 
-public class SmartFragment extends Fragment {
+public class FavoritesActivity extends Fragment {
 
     // Store instance variables
     private String title;
@@ -38,9 +39,7 @@ public class SmartFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.community_item_view, container, false);
-        TextView tvLabel = view.findViewById(R.id.event_name);
-        tvLabel.setText(page + " -- " + title);
+        View view = inflater.inflate(R.layout.activity_favorites, container, false);
         return view;
     }
 }

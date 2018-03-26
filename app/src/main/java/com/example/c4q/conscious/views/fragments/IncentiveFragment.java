@@ -38,9 +38,6 @@ public class IncentiveFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.community_item_view, container, false);
-        TextView tvLabel = view.findViewById(R.id.event_name);
-        tvLabel.setText(page + " -- " + title);
-        return view;
+        return inflater.inflate(R.layout.incentive_fragment, container, false);
     }
 }

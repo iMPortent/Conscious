@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.example.c4q.conscious.views.fragments.CommunityFragment;
-import com.example.c4q.conscious.views.fragments.IncentiveFragment;
-import com.example.c4q.conscious.views.fragments.SmartFragment;
 
 
 public class vPagerAdapter extends FragmentPagerAdapter {
