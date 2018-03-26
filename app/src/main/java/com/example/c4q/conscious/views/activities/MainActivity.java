@@ -25,11 +25,7 @@ public class MainActivity extends FragmentActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     TabLayout vPagerIcons;
-    TabItem vPagerTabIcon1;
-    TabItem vPagerTabIcon2;
-    TabItem vPagerTabIcon3;
-    TabItem vPagerTabIcon4;
-    TabItem vPagerTabIcon5;
+    ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.community_dummy,
             R.drawable.smart_dummy,
@@ -45,18 +41,13 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: ran before frag");
 
-        ViewPager viewPager = findViewById(R.id.vpPager);
+        viewPager = findViewById(R.id.vpPager);
         adapterViewPager = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
         setupTabIcons();
-        vPagerTabIcon1 = findViewById(R.id.tabIcon1);
-        vPagerTabIcon2 = findViewById(R.id.tabIcon2);
-        vPagerTabIcon3 = findViewById(R.id.tabIcon3);
-        vPagerTabIcon4 = findViewById(R.id.tabIcon4);
-        vPagerTabIcon5 = findViewById(R.id.tabIcon5);
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
@@ -64,7 +55,20 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-        private void setupTabIcons(){
+    @Override
+    public void onBackPressed() {
+        if (viewPager.getCurrentItem() == 0) {
+            // If the user is currently looking at the first step, allow the system to handle the
+            // Back button. This calls finish() on this activity and pops the back stack.
+            super.onBackPressed();
+        } else {
+            // Otherwise, select the previous step.
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+        }
+    }
+
+
+    private void setupTabIcons(){
             vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
             vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
             vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
@@ -76,7 +80,6 @@ public class MainActivity extends FragmentActivity {
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
-        private ViewPager mPager;
         private Fragment[] pages = {
                 new CommunityFragment(),
                 new SmartFragment(),
@@ -91,21 +94,26 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int pos) {
-            switch(pos) {
-
-                case 0:
-                    return CommunityFragment.newInstance(1, "FirstFragment");
-                case 1:
-                    return IncentiveFragment.newInstance(2, "Second Fragment");
-//                case 2: return ThirdFragment.newInstance(2, "Third Fragment");
-//                case 3: return ThirdFragment.newInstance(4, "Fourth Fragment");
-                default: return CommunityFragment.newInstance(1, "Default");
-            }
+//            switch(pos) {
+//
+//                case 0:
+//                    return CommunityFragment.newInstance(1, "FirstFragment");
+//                case 1:
+//                    return SmartFragment.newInstance(2, "Second Fragment");
+//                case 2:
+//                    return IncentiveFragment.newInstance(3, "Third Fragment");
+//                case 3:
+//                    return GoodieBagFragment.newInstance(4, "Fourth Fragment");
+//                case 4:
+//                    return FavoritesFragment.newInstance(5, "Fifth Fragment");
+//                default: return CommunityFragment.newInstance(1, "Default");
+//            }
+            return pages[pos];
         }
 
         @Override
         public int getCount() {
-            return 5;
+            return pages.length;
         }
     }
 
