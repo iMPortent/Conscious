@@ -5,6 +5,12 @@ import java.util.ArrayList;
 
 public class Events {
 
+    /***
+     *
+     * You don't need the events model for the recycler view, just deal with the eventModel
+     *
+     * **/
+
     private ArrayList<EventsModel> eventResults;
 
     public Events(ArrayList<EventsModel> eventResults) {

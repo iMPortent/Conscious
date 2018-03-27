@@ -7,11 +7,16 @@
     <string name="login">login</string>
     <string name="sign_up">sign Up</string>
     <string name="remember_check_bx">Remember Login</string>
-    <string name="community_tab">Community</string>
-    <string name="incentive_tab">Incentives</string>
-    <string name="smart_tab">Smart</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">email</string>
+    <string name="here_is_the_favorites_activity_that_extends_fragment">Here is the favorites activity that extends fragment.</string>
+    <string name="disclaimer">What you are about to engage in is the opportunity to
+                              progress your current daily behavioral patterns. You have
+                                found yourself here because at some point you knew you could
+                            do better and be better as a human being in life. </string>
+    <string name="disclaimer2">In no way does this app diagnose, cure or counsel it\'s users.
+                            In every way, does this app advocate and cheer you on in the direction you know you need to go.</string>
+
 </resources>
