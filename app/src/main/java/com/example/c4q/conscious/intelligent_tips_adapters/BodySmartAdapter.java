@@ -1,12 +1,13 @@
-package com.example.c4q.conscious.goodie_bag_adapters;
+package com.example.c4q.conscious.intelligent_tips_adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NumberSmartAdapter extends RecyclerView.Adapter<NumberSmartAdapter.ViewHolder> {
+public class BodySmartAdapter extends RecyclerView.Adapter<BodySmartAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         public ViewHolder(View itemView) {
             super(itemView);
         }
@@ -14,12 +15,12 @@ public class NumberSmartAdapter extends RecyclerView.Adapter<NumberSmartAdapter.
 
 
     @Override
-    public NumberSmartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BodySmartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(NumberSmartAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(BodySmartAdapter.ViewHolder holder, int position) {
 
     }
 

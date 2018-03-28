@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.goodie_bag_adapters;
+package com.example.c4q.conscious.intelligent_tips_adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

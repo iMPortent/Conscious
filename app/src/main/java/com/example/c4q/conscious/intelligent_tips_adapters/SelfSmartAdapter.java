@@ -1,10 +1,10 @@
-package com.example.c4q.conscious.goodie_bag_adapters;
+package com.example.c4q.conscious.intelligent_tips_adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NatureSmartAdapter extends RecyclerView.Adapter<NatureSmartAdapter.ViewHolder> {
+public class SelfSmartAdapter extends RecyclerView.Adapter<SelfSmartAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(View itemView) {
@@ -14,12 +14,12 @@ public class NatureSmartAdapter extends RecyclerView.Adapter<NatureSmartAdapter.
 
 
     @Override
-    public NatureSmartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SelfSmartAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(NatureSmartAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(SelfSmartAdapter.ViewHolder holder, int position) {
 
     }
 
