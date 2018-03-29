@@ -44,6 +44,9 @@ public class LoginActivity extends Activity {
         password = findViewById(R.id.password);
         login = getApplicationContext().getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
 
+        user_name.setText(getString(R.string.username));
+        password.setText(getString(R.string.passwordddd));
+
         if (login.getBoolean("isChecked", true)) {
             user_name.setText(login.getString("username", user_name.getText().toString()));
             password.setText(login.getString("password", password.getText().toString()));

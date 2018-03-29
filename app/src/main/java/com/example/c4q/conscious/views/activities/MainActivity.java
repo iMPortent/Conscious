@@ -12,6 +12,11 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.eftimoff.viewpagertransformers.BackgroundToForegroundTransformer;
+import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
+import com.eftimoff.viewpagertransformers.ParallaxPageTransformer;
+import com.eftimoff.viewpagertransformers.RotateUpTransformer;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
@@ -48,6 +53,7 @@ public class MainActivity extends FragmentActivity {
         viewPager = findViewById(R.id.vpPager);
         adapterViewPager = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
+        viewPager.setPageTransformer(true, new DrawFromBackTransformer());
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
