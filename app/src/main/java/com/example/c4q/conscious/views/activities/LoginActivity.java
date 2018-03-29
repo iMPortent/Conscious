@@ -1,6 +1,7 @@
 package com.example.c4q.conscious.views.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -44,8 +45,8 @@ public class LoginActivity extends Activity {
         password = findViewById(R.id.password);
         login = getApplicationContext().getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
 
-        user_name.setText(getString(R.string.username));
-        password.setText(getString(R.string.passwordddd));
+        user_name.setText(login.getString("username",""));
+        password.setText(login.getString("password",""));
 
         if (login.getBoolean("isChecked", true)) {
             user_name.setText(login.getString("username", user_name.getText().toString()));
@@ -60,23 +61,29 @@ public class LoginActivity extends Activity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signInWithEmailAndPassword(user_name.getText().toString(), password.getText().toString())
-                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    Log.d("TAG", "signInWithEmail:success");
-                                    Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
-                                    intent.putExtra("username", user_name.getText().toString());
-                                    startActivity(intent);
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Log.w("TAG", "signInWithEmail:failure", task.getException());
-                                    Toast.makeText(LoginActivity.this, "Authentication failed.",Toast.LENGTH_SHORT).show();
+                if(isValid(user_name.getText().toString(), password.getText().toString(), getApplicationContext())) {
+                    mAuth.signInWithEmailAndPassword(user_name.getText().toString(), password.getText().toString())
+                            .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // Sign in success, update UI with the signed-in user's information
+                                        Log.d("TAG", "signInWithEmail:success");
+                                        Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
+                                        intent.putExtra("username", user_name.getText().toString());
+                                        startActivity(intent);
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        Log.w("TAG", "signInWithEmail:failure", task.getException());
+                                        Toast.makeText(LoginActivity.this, "Username or password is incorrect! Try again or sign up?", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        });
+                            });
+                }
+                if(rememberMe.isChecked()){
+                    login.edit().putString("username", user_name.getText().toString()).apply();
+                    login.edit().putString("password", password.getText().toString()).apply();
+                }
 
             }
         });
@@ -89,5 +96,32 @@ public class LoginActivity extends Activity {
             }
         });
 
+    }
+
+    public static boolean isValid(String user, String pass, Context context){
+        if(isEmail(user, context) && goodPass(pass, context)){
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean goodPass(String pass, Context context){
+        if(pass.length() >= 6){
+            return true;
+        } else {
+            Toast.makeText(context, "Password needs to be atleast 6 characters long!",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+    }
+
+    public static boolean isEmail(String email, Context context){
+        if(email.contains("@") && email.contains(".") && email.length() > 4){
+            return true;
+        } else {
+            Toast.makeText(context, "Enter a valid email address!",Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 }

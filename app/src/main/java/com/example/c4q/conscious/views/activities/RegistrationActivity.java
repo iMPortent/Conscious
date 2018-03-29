@@ -17,6 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import static com.example.c4q.conscious.views.activities.LoginActivity.isValid;
+
 public class RegistrationActivity extends Activity {
 
     FirebaseAuth mAuth;
@@ -48,22 +50,23 @@ public class RegistrationActivity extends Activity {
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.createUserWithEmailAndPassword(username_et.getText().toString(),password_et.getText().toString())
-                        .addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent intentToLogin = new Intent(RegistrationActivity.this, LoginActivity.class);
-                                    startActivity(intentToLogin);
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                                    Toast.makeText(RegistrationActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                if(isValid(username_et.getText().toString(), password_et.getText().toString(),getApplicationContext())) {
+                    mAuth.createUserWithEmailAndPassword(username_et.getText().toString(), password_et.getText().toString())
+                            .addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Intent intentToLogin = new Intent(RegistrationActivity.this, LoginActivity.class);
+                                        startActivity(intentToLogin);
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        Log.w("TAG", "createUserWithEmail:failure", task.getException());
+                                        Toast.makeText(RegistrationActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        });
-
+                            });
+                }
             }
         });
     }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/community"
+        android:icon="@drawable/community_dummy"
+        android:title="Community"/>
+    <item
+        android:id="@+id/smart"
+        android:icon="@drawable/smart_dummy"
+        android:title="Smart"/>
+    <item
+        android:id="@+id/incentive"
+        android:icon="@drawable/incentives_dummy"
+        android:title="Incentives"/>
+</menu>
