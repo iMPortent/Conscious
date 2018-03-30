@@ -10,15 +10,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.brandongogetap.stickyheaders.StickyLayoutManager;
+import com.brandongogetap.stickyheaders.exposed.StickyHeader;
+import com.brandongogetap.stickyheaders.exposed.StickyHeaderHandler;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
 
-public class IntelligentTipsFragment extends Fragment {
+import java.util.List;
+
+import static java.lang.Math.E;
+
+public class IntelligentTipsFragment extends Fragment implements StickyHeaderHandler{
 
 
     RecyclerView intelligentTipsRv;
 
     Context mContext;
+
+    @Override
+    public List<?> getAdapterData() {
+        return null;
+    }
 
 
     @Nullable
@@ -34,11 +46,11 @@ public class IntelligentTipsFragment extends Fragment {
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
+        StickyLayoutManager stickyLayoutManager = new StickyLayoutManager(mContext, StickyLayoutManager.VERTICAL,false, (StickyHeaderHandler) getAdapterData());
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-
-        intelligentTipsRv.setLayoutManager(linearLayoutManager);
+        intelligentTipsRv.setLayoutManager(stickyLayoutManager);
 
         return root;
     }
+
 }

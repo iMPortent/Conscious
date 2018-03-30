@@ -4,7 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.brandongogetap.stickyheaders.exposed.StickyHeaderHandler;
+
+import java.util.List;
+
 public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_Tips_Adapter.ViewHolder> {
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
