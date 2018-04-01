@@ -1,21 +1,17 @@
 package com.example.c4q.conscious.views.activities;
 
-import android.graphics.Color;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.TabItem;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.util.Log;
+
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
-import com.example.c4q.conscious.views.fragments.GoodieBagFragment;
 import com.example.c4q.conscious.views.fragments.IncentiveFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +30,6 @@ public class MainActivity extends FragmentActivity {
             R.drawable.community_dummy_icon,
             R.drawable.smart_dummy_icon,
             R.drawable.incentive_dummy_icon,
-            R.drawable.goodie_bag_dummy_icon,
             R.drawable.favorites_dummy_icon
     };
 
@@ -88,7 +83,6 @@ public class MainActivity extends FragmentActivity {
                 new CommunityFragment(),
                 new SmartFragment(),
                 new IncentiveFragment(),
-                new GoodieBagFragment(),
                 new FavoritesFragment(),
         };
 

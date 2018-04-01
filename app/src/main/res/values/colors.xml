@@ -6,4 +6,7 @@
     <color name="colorBackground">#FF6464</color>
     <color name="colorFragBackground">#48C9B0</color>
     <color name="navigationBarColor">#17202A</color>
+
+    <!-- -->
+    <color name="colorWhite">#FFFFFF</color>
 </resources>
