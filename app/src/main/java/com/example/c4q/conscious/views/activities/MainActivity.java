@@ -15,7 +15,6 @@ import android.util.Log;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
-import com.example.c4q.conscious.views.fragments.GoodieBagFragment;
 import com.example.c4q.conscious.views.fragments.IncentiveFragment;
 import com.example.c4q.conscious.views.fragments.InterpersonalFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
@@ -89,7 +88,6 @@ public class MainActivity extends FragmentActivity {
                 new CommunityFragment(),
                 new SmartFragment(),
                 new InterpersonalFragment(),
-                new GoodieBagFragment(),
                 new FavoritesFragment(),
         };
 

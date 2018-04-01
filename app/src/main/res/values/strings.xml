@@ -7,6 +7,14 @@
     <string name="login">login</string>
     <string name="sign_up">sign Up</string>
     <string name="remember_check_bx">Remember Login</string>
+    <string name="body_smart">Body Smart</string>
+    <string name="music_smart">Music Smart</string>
+    <string name="nature_smart">Nature Smart</string>
+    <string name="number_smart">Number Smart</string>
+    <string name="people_smart">People Smart</string>
+    <string name="picture_smart">Picture Smart</string>
+    <string name="self_smart">Self Smart</string>
+    <string name="word_smart">Word Smart</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -18,5 +26,181 @@
                             do better and be better as a human being in life. </string>
     <string name="disclaimer2">In no way does this app diagnose, cure or counsel it\'s users.
                             In every way, does this app advocate and cheer you on in the direction you know you need to go.</string>
+
+
+    <string name="body_smart_card_1"> Try studying while moving or exercising</string>
+    <string name="body_smart_card2"> Try using physical motions to articulate vocabulary and key concepts</string>
+    <string name="body_smart_card3"> Try to draw or write things in the air as you think about them</string>
+    <string name="body_smart_card4"> Write concepts/terms down in your own words</string>
+    <string name="body_smart_card5"> Act out the any concepts you need to remember</string>
+    <string name="body_smart_card6"> Utilize manipulative and interactive web material to master difficult concepts</string>
+    <string name="body_smart_card7"> Look for real-life examples that demonstrate what you’re learning about</string>
+
+    <string name="music_smart_card1"> Create a song, rap, or rhyme that will help you remember difficult concepts</string>
+    <string name="music_smart_card2"> Listen to instrumental music while you study</string>
+    <string name="music_smart_card3"> Remember vocabulary words by linking them to similar-sounding words in your mind</string>
+    <string name="music_smart_card4"> Read text and notes aloud and repeat when it doesn’t makes sense</string>
+    <string name="music_smart_card5"> Try saying concepts or definitions aloud with your eyes closed</string>
+    <string name="music_smart_card6"> create a Music Video</string>
+
+    <string name="nature_smart_card1"> Try to be in or near nature when studying</string>
+    <string name="nature_smart_card2"> Try to connect vocabulary to nature</string>
+
+    <string name="number_smart_card1"> Organize chapter notes into an outline (roman numeral style)</string>
+    <string name="number_smart_card2"> Transform your notes into numeric charts, graphs, and tables.</string>
+    <string name="number_smart_card3"> Put information you receive into categories and classifications that you create</string>
+    <string name="number_smart_card4"> Compare/contrast previously learned items with new concepts (rock cycle vs. carbon and nitrogen cycles)</string>
+    <string name="number_smart_card5"> Formulate analogies to describe abstract or complex ideas</string>
+    <string name="number_smart_card6"> Devise a mnemonic device to help remember methods or multi-faceted definitions/terms</string>
+
+    <string name="people_smart_card1"> Discuss what you learn with a friend or family member</string>
+    <string name="people_smart_card2"> Have someone quiz you before an exam</string>
+    <string name="people_smart_card3"> Create or join a study group</string>
+    <string name="people_smart_Card4"> Go over section assessment chapter test questions from book with others</string>
+    <string name="people_smart_card5"> Avoid being alone when you try to study (only if your intrapersonal intelligence is weak)</string>
+    <string name="people_smart_card6"> Read about or watch videos on others’ ideas on difficult topics (Google, YouTube, etc.)</string>
+    <string name="people_smart_card7"> Share ideas with friends</string>
+    <string name="people_smart_card8"> Partake in the Extra Credit Music Video Assignment with some friends</string>
+
+    <string name="picture_smart_card1"> Sketch pictures that go along with your notes or in the margins of your textbooks</string>
+    <string name="picture_smart_card2"> Draw a picture on a flashcard for each concept or vocabulary word you study</string>
+    <string name="picture_smart_card3"> Design charts, tables, diagrams, foldables, and/or other graphic organizers to organize and keep track of what you learn</string>
+    <string name="picture_smart_card4"> Picture images and scenarios in your mind to associate with different concepts and ideas</string>
+    <string name="picture_smart_card5"> Re-watch videos from class</string>
+    <string name="picture_smart_card6"> Make visual flash cards to study vocabulary and key concepts</string>
+
+    <string name="self_smart_card1"> Find a place to study alone where you won’t be interrupted (avoid group studying)</string>
+    <string name="self_smart_card2"> Study in quiet places(unless your musical intelligence in high in which case light instrumentals may help)</string>
+    <string name="self_smart_card3"> Talk to yourself or an inanimate object about key concepts</string>
+    <string name="self_smart_card4"> Reflect upon and correct handouts, book questions, and study guide by yourself</string>
+    <string name="self_smart_card5"> Use google to complete self-check quizzes for each section</string>
+    <string name="self_smart_card6"> Keep a daily personal journal on what you learn</string>
+
+    <string name="word_smart_card1"> Make flashcards for vocabulary AND key concepts (speak aloud when self-quizzing)</string>
+    <string name="word_smart_card2"> Read textbook, notes (ones you took in class and from PowerPoint on website), handouts, etc. (repeat if necessary)</string>
+    <string name="word_smart_card3"> Take extra notes on tougher parts of chapter(s)</string>
+    <string name="word_smart_card4"> Rewrite key concepts and definitions</string>
+    <string name="word_smart_card5"> Orally summarize section to another person (friend, parent, etc.)</string>
+    <string name="word_smart_card6"> Re-organize class notes</string>
+    <string name="word_smart_card7"> Orally recite definitions and key concepts</string>
+    <string name="title_activity_on_boarding">OnBoardingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <!-- On Boarding Activity strings:  -->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Welcome Consciousness</string>
+    <string name="slide_1_desc">The easiest way to impact your current intelligence and build different types of intelligence types!</string>
+
+    <string name="slide_2_title">Build Multiple Intelligences</string>
+    <string name="slide_2_desc">Introduce yourself to the different ways you can impact your brain by understanding how you can upgrade it!</string>
+
+    <string name="slide_3_title">Learn From Growth Challenges</string>
+    <string name="slide_3_desc">Interact with challenges for specific intelligence types and allow yourself to track + maintain your growth goals !</string>
+
+    <string name="slide_4_title">Track Personal Challenges</string>
+    <string name="slide_4_desc">Frequently keep track of your progress towards your self defined goals to increase your chances of success</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+
+
+    <!-- String resource values for IntelligentTipsFragments: -->
+
+    <!-- App name strings:  -->
+    <string name="body_smart_title_txt">Body Smart</string>
+    <string name="music_smart_title_txt">Music Smart</string>
+    <string name="nature_smart_title_txt">Nature Smart</string>
+    <string name="number_smart_title_txt">Number Smart</string>
+    <string name="people_smart_title_txt">People Smart</string>
+    <string name="picture_smart_title_txt">Picture Smart</string>
+    <string name="self_smart_title_txt">Self Smart</string>
+    <string name="word_smart_title_txt">Word Smart</string>
+
+
+    <!-- Body Smart Strings: -->
+    <string name="body_smart_description">Body smart people work well with their hands. You enjoy physical activity such as exercise, sports, and outdoor work.</string>
+    <string name="body_smart_1_txt">Write concepts/terms down in your own words</string>
+    <string name="body_smart_2_txt">Act out the concepts you need to remember</string>
+    <string name="body_smart_3_txt">Look for real-life examples that demonstrate what you’re learning about</string>
+    <string name="body_smart_4_txt">Utilize manipulatives and interactive web material to master difficult concepts</string>
+    <string name="body_smart_5_txt">Try studying while moving or exercising</string>
+    <string name="body_smart_6_txt">Use physical motions to articulate vocabulary and key concepts</string>
+    <string name="body_smart_7_txt">Draw or write things in the air as you think about them</string>
+
+
+    <!-- Music Smart Strings:  -->
+    <string name="music_smart_description">Music smart people are good with rhythms and beats. You enjoy listening to music, attending concerts, and creating songs</string>
+    <string name="music_smart_1_txt">Create a song, rap, or rhyme that will help you remember difficult concepts</string>
+    <string name="music_smart_2_txt">Listen to instrumental music while you study</string>
+    <string name="music_smart_3_txt">Remember vocabulary words by linking them to similar-sounding words in your mind</string>
+    <string name="music_smart_4_txt">Read text and notes aloud and repeat when it doesn’t makes sense</string>
+    <string name="music_smart_5_txt">Try saying concepts or definitions aloud with your eyes closed</string>
+
+
+    <!-- Nature Smart Strings:  -->
+    <string name="nature_smart_description">Nature smart people enjoy learning about the world of plants and animals. You generally like science and enjoy learning outdoors if the weather suits it.</string>
+    <string name="nature_smart_1_txt">Try to be in or near nature when studying</string>
+    <string name="nature_smart_2_txt">Try to connect vocabulary to nature</string>
+
+
+    <!-- Number Smart Strings:  -->
+    <string name="number_smart_description">Number smart people are good with numbers, logic, and equations. You enjoy coming up with solutions to logical problems and figuring things out.</string>
+    <string name="number_smart_1_txt">Organize chapter notes into an outline (roman numeral style)</string>
+    <string name="number_smart_2_txt">Transform your notes into numeric charts, graphs, and tables.</string>
+    <string name="number_smart_3_txt">Put information you receive into categories and classifications that you create</string>
+    <string name="number_smart_4_txt">Compare/contrast previously learned items with new concepts (rock cycle vs. carbon &amp; nitrogen cycles)</string>
+    <string name="number_smart_5_txt">Formulate analogies to describe abstract or complex ideas</string>
+    <string name="number_smart_6_txt">Devise a mnemonic device to help remember methods or multi-faceted definitions/terms</string>
+
+
+
+    <!-- People Smart Strings:  -->
+    <string name="people_smart_description">Those who are people smart are good with relating to people. You enjoy going to parties, visiting with friends, and sharing what you learn</string>
+    <string name="people_smart_1_txt">Discuss what you learn with a friend or family member</string>
+    <string name="people_smart_2_txt">Have someone quiz you before an exam</string>
+    <string name="people_smart_3_txt">Create or join a study group</string>
+    <string name="people_smart_4_txt">Go over section assessment chapter test questions from book with others</string>
+    <string name="people_smart_5_txt">Avoid being alone when you try to study (only if your intrapersonal intelligence is weak)</string>
+    <string name="people_smart_6_txt">Read about or watch videos on others’ ideas on difficult topics (Google, YouTube, etc.)</string>
+    <string name="people_smart_7_txt">Share ideas with friends</string>
+
+
+
+    <!-- Picture Smart Strings:  -->
+    <string name="picture_smart_description">Picture smart people are good with art and design. You enjoy being creative, watching movies, and visiting art museums</string>
+    <string name="picture_smart_1_txt">Sketch pictures that go along with your notes or in the margins of your textbooks</string>
+    <string name="picture_smart_2_txt">Draw a picture on a flashcard for each concept or vocabulary word you study</string>
+    <string name="picture_smart_3_txt">Design charts, tables, diagrams, foldables, and/or other graphic organizers to organize and keep track of what you learn</string>
+    <string name="picture_smart_4_txt">Picture images and scenarios in your mind to associate with different concepts and ideas</string>
+    <string name="picture_smart_5_txt">Re-watch videos from class</string>
+    <string name="picture_smart_6_txt">Make visual flash cards to study vocabulary and key concepts</string>
+
+
+    <!-- Self Smart Strings: -->
+    <string name="self_smart_description">Self smart people are comfortable with themselves. You enjoy being alone to think and reflect.</string>
+    <string name="self_smart_1_txt">Find a place to study alone where you won’t be interrupted (avoid group studying)</string>
+    <string name="self_smart_2_txt">Study in quiet places(unless your musical intelligence in high in which case light instrumentals may help)</string>
+    <string name="self_smart_3_txt">Talk to yourself or an inanimate object about key concepts</string>
+    <string name="self_smart_4_txt">Reflect upon and correct handouts, book questions, and study guide by yourself</string>
+    <string name="self_smart_5_txt">Keep a daily personal journal on what you learn</string>
+
+
+    <!-- Word Smart Strings: -->
+    <string name="word_smart_description">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="word_smart_1_txt">Make flashcards for vocabulary AND key concepts (speak aloud when self-quizzing)</string>
+    <string name="word_smart_2_txt">Read textbook, notes (ones you took in class and from PowerPoint on website), handouts, etc. (repeat if necessary)</string>
+    <string name="word_smart_3_txt">Take extra notes on tougher parts of chapter(s) </string>
+    <string name="word_smart_4_txt">Rewrite key concepts and definitions</string>
+    <string name="word_smart_5_txt">Orally summarize section to another person (friend, parent, etc.)</string>
+    <string name="word_smart_6_txt">Re-organize class notes</string>
+    <string name="word_smart_7_txt">Orally recite definitions and key concepts</string>
+
 
 </resources>

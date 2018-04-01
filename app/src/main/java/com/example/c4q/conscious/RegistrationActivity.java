@@ -48,11 +48,11 @@ public class RegistrationActivity extends Activity {
         submit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.createUserWithEmailAndPassword(username_et.getText().toString(),password_et.getText().toString())
+                    mAuth.createUserWithEmailAndPassword(username_et.getText().toString(),password_et.getText().toString())
                         .addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
+                                if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent intentToLogin = new Intent(RegistrationActivity.this, MainActivity.class);
                                     startActivity(intentToLogin);
@@ -61,6 +61,7 @@ public class RegistrationActivity extends Activity {
                                     Log.w("TAG", "createUserWithEmail:failure", task.getException());
                                     Toast.makeText(RegistrationActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
+
                             }
                         });
 
