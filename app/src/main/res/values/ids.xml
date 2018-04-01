@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Onboarding Activity id's -->
+    <item name="skip_btn" type ="id"> Skip Button id </item>
+    <item name="next_btn" type ="id"> Next/Finish Button id </item>
+
+
+</resources>
