@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.views.fragments;
+package com.example.c4q.conscious.backend;
 
 import android.content.Context;
 import android.content.SharedPreferences;

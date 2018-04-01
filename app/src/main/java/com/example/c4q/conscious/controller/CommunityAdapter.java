@@ -1,6 +1,5 @@
 package com.example.c4q.conscious.controller;
 
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.model.Events;
 import com.example.c4q.conscious.model.EventsModel;
-import com.example.c4q.conscious.views.fragments.CommunityFragment;
+import com.example.c4q.conscious.views.fragments.EngageFragment;
 
 import java.util.ArrayList;
 
@@ -19,7 +18,7 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     public ArrayList<Events> eventsList;
 
-    public CommunityAdapter(CommunityFragment communityFragment, ArrayList<Events> eventsList){
+    public CommunityAdapter(EngageFragment engageFragment, ArrayList<Events> eventsList){
         this.eventsList = new ArrayList<>();
     }
 

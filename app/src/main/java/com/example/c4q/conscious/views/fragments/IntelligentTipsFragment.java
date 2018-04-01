@@ -1,9 +1,9 @@
 package com.example.c4q.conscious.views.fragments;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -46,9 +46,7 @@ public class IntelligentTipsFragment extends Fragment implements StickyHeaderHan
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
-        StickyLayoutManager stickyLayoutManager = new StickyLayoutManager(mContext, StickyLayoutManager.VERTICAL,false, (StickyHeaderHandler) getAdapterData());
-
-        intelligentTipsRv.setLayoutManager(stickyLayoutManager);
+        intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getSu));
 
         return root;
     }

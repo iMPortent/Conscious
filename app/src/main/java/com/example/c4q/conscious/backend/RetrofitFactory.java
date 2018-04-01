@@ -1,5 +1,6 @@
 package com.example.c4q.conscious.backend;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.example.c4q.conscious.model.QODResponse;
@@ -19,6 +20,7 @@ public class RetrofitFactory {
    private static RetrofitFactory retrofitFactory;
    private Retrofit retrofit;
    private QuotesApiListener quotesApiListener;
+   final private static String TAG = "enRetrofitFactory";
 
 
    public static RetrofitFactory getInstance(){
@@ -44,24 +46,30 @@ public class RetrofitFactory {
 
 
     public void getCategories(String category){
+
+       Log.d(TAG,"retrieval by category has begun");
+
        QuotesByCategoryService quotesByCategory = buildRetrofit().create(QuotesByCategoryService.class);
        Call<QODResponse>serviceResponse = quotesByCategory.allCategories(category);
        serviceResponse.enqueue(new Callback<QODResponse>() {
            @Override
-           public void onResponse(Call<QODResponse> call, Response<QODResponse> response) {
+           public void onResponse(@NonNull Call<QODResponse> call, @NonNull Response<QODResponse> response) {
                if(response.isSuccessful()){
+                   Log.d(TAG,"success");
                    if(quotesApiListener !=null && response.body() != null){
                        quotesApiListener.quotesCallback(response.body());
-                       Log.d("TAG", response.body() + "");
+                       Log.d(TAG, response.body() + "");
                    } else {
-                       Log.d("TAG",  " response body is null");
+                       Log.d(TAG,  " response body is null");
                    }
+               } else {
+                   Log.d(TAG, "failed retrofit call");
                }
            }
 
            @Override
            public void onFailure(Call<QODResponse> call, Throwable t) {
-               Log.e("TAG", "Falied: " + t.getMessage());
+               Log.e(TAG, "Falied: " + t.getMessage());
            }
        });
     }

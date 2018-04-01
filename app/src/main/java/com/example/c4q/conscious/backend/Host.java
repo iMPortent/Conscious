@@ -5,7 +5,7 @@ package com.example.c4q.conscious.backend;
  */
 
 public enum Host {
-    BASEURL_THEY_SAID_SO(" http://quotes.rest/qod/");
+    BASEURL_THEY_SAID_SO("https://quotes.rest/");
 
     Host(String url){
         this.url = url;

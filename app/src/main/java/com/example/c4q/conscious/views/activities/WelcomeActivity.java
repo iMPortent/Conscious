@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.views.fragments.PrefManager;
+import com.example.c4q.conscious.backend.PrefManager;
 
 public class WelcomeActivity extends AppCompatActivity {
 
