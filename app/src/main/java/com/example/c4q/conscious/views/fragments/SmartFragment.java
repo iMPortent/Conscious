@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.c4q.conscious.GoalAdapter;
+import com.example.c4q.conscious.controller.GoalAdapter;
 import com.example.c4q.conscious.R;
 
 import java.util.ArrayList;

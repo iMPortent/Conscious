@@ -17,6 +17,7 @@ import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
 import com.example.c4q.conscious.views.fragments.GoodieBagFragment;
 import com.example.c4q.conscious.views.fragments.IncentiveFragment;
+import com.example.c4q.conscious.views.fragments.InterpersonalFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -87,7 +88,7 @@ public class MainActivity extends FragmentActivity {
         private Fragment[] pages = {
                 new CommunityFragment(),
                 new SmartFragment(),
-                new IncentiveFragment(),
+                new InterpersonalFragment(),
                 new GoodieBagFragment(),
                 new FavoritesFragment(),
         };
