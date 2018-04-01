@@ -1,5 +1,5 @@
 package com.example.c4q.conscious.controller;
-
+/*
 import android.app.Application;
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -46,3 +46,4 @@ public class vPagerAdapter extends FragmentPagerAdapter {
     }
 
 }
+*/

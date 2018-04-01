@@ -13,6 +13,7 @@ import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
 import com.example.c4q.conscious.views.fragments.IncentiveFragment;
+import com.example.c4q.conscious.views.fragments.IntelligentTipsFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -71,8 +72,8 @@ public class MainActivity extends FragmentActivity {
         vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
         vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
         vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
-        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+
+
 
 
     }
@@ -82,8 +83,8 @@ public class MainActivity extends FragmentActivity {
         private Fragment[] pages = {
                 new CommunityFragment(),
                 new SmartFragment(),
-                new IncentiveFragment(),
-                new FavoritesFragment(),
+                new IntelligentTipsFragment(),
+                new IncentiveFragment()
         };
 
         public ScreenSlidePagerAdapter(FragmentManager fm) {
