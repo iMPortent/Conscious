@@ -1,24 +1,15 @@
 package com.example.c4q.conscious.views.activities;
 
-import android.graphics.Color;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-
-import com.eftimoff.viewpagertransformers.BackgroundToForegroundTransformer;
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
-import com.eftimoff.viewpagertransformers.ParallaxPageTransformer;
-import com.eftimoff.viewpagertransformers.RotateUpTransformer;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.views.fragments.CommunityFragment;
 import com.example.c4q.conscious.views.fragments.FavoritesFragment;
 import com.example.c4q.conscious.views.fragments.GoodieBagFragment;
 import com.example.c4q.conscious.views.fragments.IncentiveFragment;
@@ -36,7 +27,7 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.community_dummy_icon,
+            R.drawable.home_white,
             R.drawable.smart_dummy_icon,
             R.drawable.incentive_dummy_icon,
             R.drawable.goodie_bag_dummy_icon,
@@ -68,11 +59,8 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
         if (viewPager.getCurrentItem() == 0) {
-            // If the user is currently looking at the first step, allow the system to handle the
-            // Back button. This calls finish() on this activity and pops the back stack.
             super.onBackPressed();
         } else {
-            // Otherwise, select the previous step.
             viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
         }
     }
@@ -82,8 +70,6 @@ public class MainActivity extends FragmentActivity {
         vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
         vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
         vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
-        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
 
 
     }
@@ -91,7 +77,6 @@ public class MainActivity extends FragmentActivity {
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
-                new CommunityFragment(),
                 new SmartFragment(),
                 new IncentiveFragment(),
                 new GoodieBagFragment(),
@@ -107,7 +92,7 @@ public class MainActivity extends FragmentActivity {
 //            switch(pos) {
 //
 //                case 0:
-//                    return CommunityFragment.newInstance(1, "FirstFragment");
+//                    return GrowthChallengeActivity.newInstance(1, "FirstFragment");
 //                case 1:
 //                    return SmartFragment.newInstance(2, "Second Fragment");
 //                case 2:
@@ -116,7 +101,7 @@ public class MainActivity extends FragmentActivity {
 //                    return GoodieBagFragment.newInstance(4, "Fourth Fragment");
 //                case 4:
 //                    return FavoritesFragment.newInstance(5, "Fifth Fragment");
-//                default: return CommunityFragment.newInstance(1, "Default");
+//                default: return GrowthChallengeActivity.newInstance(1, "Default");
 //            }
             return pages[pos];
         }

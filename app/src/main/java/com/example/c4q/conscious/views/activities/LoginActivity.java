@@ -26,9 +26,6 @@ public class LoginActivity extends Activity {
     private CheckBox rememberMe;
     private EditText user_name;
     private EditText password;
-    private ImageView login_icon;
-    private Button login_btn;
-    private Button registration_btn;
     private FirebaseAuth mAuth;
 
     @Override
@@ -37,9 +34,8 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-        login_icon = findViewById(R.id.login_icon);
-        login_btn = findViewById(R.id.login_btn);
-        registration_btn = findViewById(R.id.registration_btn);
+        Button login_btn = findViewById(R.id.login_btn);
+        Button registration_btn = findViewById(R.id.registration_btn);
         rememberMe = findViewById(R.id.remember_me);
         user_name = findViewById(R.id.username);
         password = findViewById(R.id.password);

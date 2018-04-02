@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by c4q on 3/27/18.
- */
 
 public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.GoalHolder> {
 

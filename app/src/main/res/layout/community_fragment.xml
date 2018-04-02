@@ -1,47 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/community_selector">
 
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/challenge_rv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/placeholder_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginStart="100dp"
-        android:src="@android:drawable/ic_lock_idle_alarm"
-        tools:layout_editor_absoluteX="109dp"
-        android:contentDescription="@string/todo"/>
-
-    <ImageView
-        android:id="@+id/placeholder_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="268dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginStart="120dp"
-        android:src="@android:drawable/ic_lock_idle_alarm"
-        android:contentDescription="@string/todo"/>
-
-
-    <ImageView
-        android:id="@+id/placeholder_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="265dp"
-        android:layout_marginStart="165dp"
-        android:src="@android:drawable/ic_lock_idle_alarm"
-        android:contentDescription="@string/todo"/>
-
-    <!--<ImageView-->
-        <!--android:id="@+id/engage_logo"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/engage_logo"-->
-        <!--android:contentDescription="@string/todo" />-->
-
+   </android.support.v7.widget.RecyclerView>
 </FrameLayout>
