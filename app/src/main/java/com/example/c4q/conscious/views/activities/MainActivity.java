@@ -1,17 +1,14 @@
 package com.example.c4q.conscious.views.activities;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.util.Log;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.views.fragments.GrowthChallengeFragment;
-import com.example.c4q.conscious.views.fragments.HomeFragment;
-import com.example.c4q.conscious.views.fragments.IntelligentTipsFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,7 +22,6 @@ public class MainActivity extends FragmentActivity {
     DatabaseReference myRef;
     TabLayout vPagerIcons;
     ViewPager viewPager;
-
     private int[] tabIcons = {
             R.drawable.ic_home_white_24dp,
             R.drawable.ic_extension_white_24dp,
