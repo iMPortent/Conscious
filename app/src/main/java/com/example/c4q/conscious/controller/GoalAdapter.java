@@ -1,10 +1,12 @@
-package com.example.c4q.conscious;
+package com.example.c4q.conscious.controller;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.c4q.conscious.R;
 
 import java.util.List;
 

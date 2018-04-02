@@ -57,29 +57,23 @@ public class LoginActivity extends Activity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isValid(user_name.getText().toString(), password.getText().toString(), getApplicationContext())) {
-                    mAuth.signInWithEmailAndPassword(user_name.getText().toString(), password.getText().toString())
-                            .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        // Sign in success, update UI with the signed-in user's information
-                                        Log.d("TAG", "signInWithEmail:success");
-                                        Intent intent = new Intent(LoginActivity.this, OnboardingActivity.class);
-                                        intent.putExtra("username", user_name.getText().toString());
-                                        startActivity(intent);
-                                    } else {
-                                        // If sign in fails, display a message to the user.
-                                        Log.w("TAG", "signInWithEmail:failure", task.getException());
-                                        Toast.makeText(LoginActivity.this, "Username or password is incorrect! Try again or sign up?", Toast.LENGTH_SHORT).show();
-                                    }
+                mAuth.signInWithEmailAndPassword(user_name.getText().toString(), password.getText().toString())
+                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d("TAG", "signInWithEmail:success");
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    intent.putExtra("username", user_name.getText().toString());
+                                    startActivity(intent);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w("TAG", "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(LoginActivity.this, "Authentication failed.",Toast.LENGTH_SHORT).show();
                                 }
-                            });
-                }
-                if(rememberMe.isChecked()){
-                    login.edit().putString("username", user_name.getText().toString()).apply();
-                    login.edit().putString("password", password.getText().toString()).apply();
-                }
+                            }
+                        });
 
             }
         });

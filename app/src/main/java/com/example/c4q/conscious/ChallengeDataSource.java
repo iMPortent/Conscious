@@ -51,7 +51,6 @@ public class ChallengeDataSource implements ChallengeDataSourceInterface {
     @Override
     public List<Challenges> getListOfData() {
         ArrayList<Challenges> listOfData = new ArrayList<>();
-        //make 12 semi-random items
         for (int i = 0; i < sizeOfCollection; i++) {
 
             listOfData.add(

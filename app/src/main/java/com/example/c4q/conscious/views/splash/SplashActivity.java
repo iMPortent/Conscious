@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.splash;
+package com.example.c4q.conscious.views.splash;
 
 import android.app.Activity;
 import android.content.Intent;
