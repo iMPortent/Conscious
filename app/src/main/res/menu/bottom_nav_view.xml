@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/community"
-        android:icon="@drawable/community_dummy"
+        android:icon="@drawable/community_dummy_icon"
         android:title="Community"/>
     <item
         android:id="@+id/smart"
-        android:icon="@drawable/smart_dummy"
+        android:icon="@drawable/smart_dummy_icon"
         android:title="Smart"/>
     <item
         android:id="@+id/incentive"
-        android:icon="@drawable/incentives_dummy"
+        android:icon="@drawable/incentive_dummy_icon"
         android:title="Incentives"/>
 </menu>

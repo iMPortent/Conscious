@@ -6,6 +6,19 @@
     <color name="colorBackground">#FF6464</color>
     <color name="colorFragBackground">#48C9B0</color>
     <color name="navigationBarColor">#17202A</color>
+    <color name="colorPrimary2">#121212</color>
+    <color name="colorPrimaryDark2">#000000</color>
+    <color name="colorAccent2">#80D8FF</color>
+    <color name="colorWindowBackground">#121212</color>
+
+    <!-- 52 = 32%, hex to alpha -->
+    <color name="colorTransparentBlack">#52000000</color>
+    <color name="colorTransparentWhite">#52FFFFFF</color>
+
+    <color name="RED">#FF0000</color>
+    <color name="BLUE">#0000FF</color>
+    <color name="GREEN">#00FF00</color>
+    <color name="YELLOW">#FFEB3B</color>
 
     <!--  App colors -->
     <color name="colorBlack">#000000</color>
@@ -47,5 +60,4 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
-
 </resources>

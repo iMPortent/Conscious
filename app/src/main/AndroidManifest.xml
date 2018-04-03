@@ -27,10 +27,7 @@
         <activity android:name=".views.activities.WelcomeActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".views.activities.LoginActivity" />
-         <!-- <activity android:name=".views.activities.OnboardingActivity" /> -->
-        <activity
-            android:name=".views.activities.OnBoardingActivity"
-            android:label="@string/title_activity_on_boarding" />
+        <activity android:name=".ChallengeDetailActivity" />
         <activity android:name=".views.activities.RegistrationActivity" />
     </application>
 

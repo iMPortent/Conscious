@@ -7,6 +7,7 @@ import android.widget.ImageView;
 
 import com.example.c4q.conscious.views.activities.LoginActivity;
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.activities.MainActivity;
 
 public class SplashActivity extends Activity {
 
@@ -26,7 +27,7 @@ public class SplashActivity extends Activity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this,MainActivity.class);
                     startActivity(intent);
                 }
             }
