@@ -4,6 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
@@ -22,20 +24,25 @@ public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_T
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView category;
-        TextView tip;
+        TextView type;
+        ImageView accomplishedImageView;
+        ImageView currentChallengesInProgress;
+        ImageButton enterChallengesButton;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            category = itemView.findViewById(R.id.category);
-            tip = itemView.findViewById(R.id.tips);
+
+            type = itemView.findViewById(R.id.type_of_intelligence);
+            accomplishedImageView = itemView.findViewById(R.id.challenge_image);
+            currentChallengesInProgress = itemView.findViewById(R.id.current_in_progress_image_view);
+            enterChallengesButton = itemView.findViewById(R.id.enter_challenges_button);
         }
 
         public void onBind(TipsModel tipsModel) {
-
-            category.setText("Type: " + tipsModel.getCategory());
-            tip.setText("Tip: " + tipsModel.getTip());
+            type.setText("Type: " + tipsModel.getIntelligentType());
+            //challengesImageView;
+            //currentChallengesInProgress;
 
         }
     }

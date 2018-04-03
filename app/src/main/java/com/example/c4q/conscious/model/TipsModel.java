@@ -1,18 +1,34 @@
 package com.example.c4q.conscious.model;
 
-public class TipsModel {
-    String category;
-    String tip;
+import android.widget.ImageView;
 
-    public TipsModel(String category, String tip) {
-        this.category = category;
-        this.tip = tip;
+public class TipsModel {
+
+    String intelligentType;
+    ImageView challengesImageView;
+    ImageView currentImageView;
+
+    public TipsModel(String intelligentType, ImageView challengesImageView, ImageView currentImageView) {
+        this.intelligentType = intelligentType;
+        this.challengesImageView = challengesImageView;
+        this.currentImageView = currentImageView;
     }
-    public String getCategory() {
-        return category;
+
+    public TipsModel(String intelligentType) {
+        this.intelligentType = intelligentType;
     }
-    public String getTip() {
-        return tip;
+
+    public String getIntelligentType() {
+        return intelligentType;
     }
+
+    public ImageView getChallengesImageView() {
+        return challengesImageView;
+    }
+
+    public ImageView getCurrentImageView() {
+        return currentImageView;
+    }
+
 
 }
