@@ -28,6 +28,8 @@ public class RegistrationActivity extends Activity {
     Button submit_btn;
     FirebaseUser currentUser;
 
+
+
     @Override
     protected void onStart() {
         super.onStart();

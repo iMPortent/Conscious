@@ -25,6 +25,8 @@ public class MainActivity extends FragmentActivity {
     DatabaseReference myRef;
     TabLayout vPagerIcons;
     ViewPager viewPager;
+    public static String intelligenceTypePicked2 = "";
+
 
     private int[] tabIcons = {
             R.drawable.ic_home_white_24dp,
@@ -71,7 +73,7 @@ public class MainActivity extends FragmentActivity {
         vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
         vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
         vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+  //      vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
 //        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
 
 
@@ -82,7 +84,7 @@ public class MainActivity extends FragmentActivity {
         private Fragment[] pages = {
                 new HomeFragment(),
                 new IntelligentTipsFragment(),
-                new GrowthChallengeFragment(),
+           //     new GrowthChallengeFragment(),
                 new SmartFragment()
 
         };

@@ -31,6 +31,7 @@ public class LoginActivity extends Activity {
     private Button registration_btn;
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

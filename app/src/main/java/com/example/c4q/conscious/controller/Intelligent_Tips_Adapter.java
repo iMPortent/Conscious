@@ -34,7 +34,7 @@ public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_T
             super(itemView);
 
             type = itemView.findViewById(R.id.type_of_intelligence);
-            accomplishedImageView = itemView.findViewById(R.id.challenge_image);
+            accomplishedImageView = itemView.findViewById(R.id.accomplishment_image);
             currentChallengesInProgress = itemView.findViewById(R.id.current_in_progress_image_view);
             enterChallengesButton = itemView.findViewById(R.id.enter_challenges_button);
         }

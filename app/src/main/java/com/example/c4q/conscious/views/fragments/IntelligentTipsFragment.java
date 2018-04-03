@@ -10,7 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.bumptech.glide.load.engine.Resource;
 import com.example.c4q.conscious.R;
@@ -18,6 +20,7 @@ import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
 import com.example.c4q.conscious.model.TipsModel;
 import com.example.c4q.conscious.views.activities.MainActivity;
 import com.example.c4q.conscious.views.activities.WelcomeActivity;
+import static com.example.c4q.conscious.views.activities.MainActivity.intelligenceTypePicked2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,29 +30,26 @@ import static android.widget.LinearLayout.VERTICAL;
 
 public class IntelligentTipsFragment extends Fragment {
 
-
-    RecyclerView intelligentTipsRv;
-
-    Context mContext;
-
-    LinearLayoutManager linearLayoutManager;
-
-    ImageButton enterChallengesButton;
-
-    List<TipsModel> rvData;
-
-    Intent sendToChallenges;
+    static RecyclerView intelligentTipsRv;
+    static Context mContext;
+    static LinearLayoutManager linearLayoutManager;
+    static ImageButton enterChallengesButton;
+    static List<TipsModel> rvData;
+    static Intent sendToChallenges;
+    static TextView intelligenceType;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_intelligent_tips, container, false);
+         View root = inflater.inflate(R.layout.fragment_intelligent_tips, container, false);
 
         mContext = getContext();
 
         intelligentTipsRv = (RecyclerView) root.findViewById(R.id.intelligent_tips_rv);
 
         enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_challenges_button);
+
+        intelligenceType = (TextView) root.findViewById(R.id.type_of_intelligence);
 
         rvData = new ArrayList<>();
 
@@ -70,16 +70,21 @@ public class IntelligentTipsFragment extends Fragment {
 
         intelligentTipsRv.setLayoutManager(linearLayoutManager);
 
-        enterChallengesButton.setOnClickListener( new View.OnClickListener(){
+        enterChallengesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                sendToChallenges = new Intent(mContext, GrowthChallengeFragment.class);
+               GrowthChallengeFragment growthChallengeFragment = new GrowthChallengeFragment();
+                Bundle args = new Bundle();
+                args.putString("IntelligenceType", intelligenceType.getText().toString());
+                growthChallengeFragment.setArguments(args);
 
+//Inflate the fragment
+                getFragmentManager().beginTransaction().add(R.id.container, growthChallengeFragment).commit();
+                sendToChallenges = new Intent(mContext, GrowthChallengeFragment.class);
+                intelligenceTypePicked2 = intelligenceType.getText().toString();
             }
         });
-
-        return root;
-    }
-
-}
+                return root;
+            }
+        }
