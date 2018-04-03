@@ -17,6 +17,7 @@ import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
 import com.example.c4q.conscious.model.TipsModel;
 import com.example.c4q.conscious.views.activities.MainActivity;
+import com.example.c4q.conscious.views.activities.WelcomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,7 @@ public class IntelligentTipsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-               // sendToChallenges = new Intent(MainActivity,)
+                sendToChallenges = new Intent(mContext, GrowthChallengeFragment.class);
 
             }
         });
