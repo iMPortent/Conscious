@@ -42,7 +42,10 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_growth_challenge);
+        setContentView(R.layout.growth_challenges_frag);
+
+        Intent intelligenceTypeSelectedIntent = getIntent();
+        String intelligenceTypeSelected = intelligenceTypeSelectedIntent.getStringExtra("IntelligenceType");
 
         recyclerView = findViewById(R.id.rec_list_activity);
         layoutInflater = getLayoutInflater();

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import com.bumptech.glide.load.engine.Resource;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
 import com.example.c4q.conscious.model.TipsModel;
+import com.example.c4q.conscious.views.activities.GrowthChallengeActivity;
 import com.example.c4q.conscious.views.activities.MainActivity;
 import com.example.c4q.conscious.views.activities.WelcomeActivity;
 import static com.example.c4q.conscious.views.activities.MainActivity.intelligenceTypePicked2;
@@ -37,6 +39,7 @@ public class IntelligentTipsFragment extends Fragment {
     static List<TipsModel> rvData;
     static Intent sendToChallenges;
     static TextView intelligenceType;
+    static CardView typeOfIntelligenceCard;
 
     @Nullable
     @Override
@@ -50,6 +53,8 @@ public class IntelligentTipsFragment extends Fragment {
         enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_challenges_button);
 
         intelligenceType = (TextView) root.findViewById(R.id.type_of_intelligence);
+
+        typeOfIntelligenceCard = (CardView) root.findViewById(R.id.card_view_item);
 
         rvData = new ArrayList<>();
 
@@ -74,17 +79,21 @@ public class IntelligentTipsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-               GrowthChallengeFragment growthChallengeFragment = new GrowthChallengeFragment();
-                Bundle args = new Bundle();
-                args.putString("IntelligenceType", intelligenceType.getText().toString());
-                growthChallengeFragment.setArguments(args);
+                Intent intent = new Intent(mContext,GrowthChallengeActivity.class);
+                intent.putExtra("IntelligenceType", intelligenceType.getText().toString());
+                startActivity(intent);
+               /* growthChallengeFragment.setArguments(args);
 
 //Inflate the fragment
                 getFragmentManager().beginTransaction().add(R.id.container, growthChallengeFragment).commit();
-                sendToChallenges = new Intent(mContext, GrowthChallengeFragment.class);
+                sendToChallenges = new Intent(mContext, GrowthChallengeActivity.class); */
                 intelligenceTypePicked2 = intelligenceType.getText().toString();
             }
         });
+
+
                 return root;
             }
-        }
+
+            public void itemSelected(){}
+}
