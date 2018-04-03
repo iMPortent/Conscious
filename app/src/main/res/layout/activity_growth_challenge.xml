@@ -14,7 +14,7 @@
         android:background="@color/colorPrimary2"
         android:elevation="@dimen/cardview_compat_inset_shadow">
 
-        <android.support.v4.widget.CircleImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circle_image_view"
             android:layout_width="150dp"
             android:layout_height="150dp"
