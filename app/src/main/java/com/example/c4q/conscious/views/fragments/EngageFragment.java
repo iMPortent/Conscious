@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.example.c4q.conscious.R;
 
 
-public class CommunityFragment extends Fragment {
+public class EngageFragment extends Fragment {
 
     @Nullable
     @Override

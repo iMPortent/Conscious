@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.c4q.conscious.views.activities.OnboardingActivity">
+    tools:context="com.example.c4q.conscious.views.activities.OnboardingActivity"
+    android:onClick="onClick">
 
     <TextView
         android:id="@+id/welcome_user_tv"
