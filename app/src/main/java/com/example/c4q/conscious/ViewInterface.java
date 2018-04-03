@@ -14,8 +14,6 @@ public interface ViewInterface {
 
     void startChallengeDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot);
 
-    void setUpAdapterAndView(List<Challenges> listOfData);
-
     void addNewChallengeToView(Challenges newItem);
 
     void deleteChallengeAt(int position);

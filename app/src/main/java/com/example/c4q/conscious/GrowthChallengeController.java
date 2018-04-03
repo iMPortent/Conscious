@@ -13,8 +13,6 @@ public class GrowthChallengeController {
     public GrowthChallengeController(ViewInterface view, ChallengeDataSource dataSource) {
         this.view = view;
         this.dataSource = dataSource;
-
-        getListFromDataSource();
     }
 
     public void onChallengeClick(Challenges challenges, View viewRoot){
@@ -26,11 +24,6 @@ public class GrowthChallengeController {
         );
     }
 
-
-    public void getListFromDataSource(){
-        view.setUpAdapterAndView(dataSource.getListOfData()
-        );
-    }
 
 
     public void createNewChallenge() {

@@ -213,6 +213,7 @@
     <string name="word_smart_5_txt">Orally summarize section to another person (friend, parent, etc.)</string>
     <string name="word_smart_6_txt">Re-organize class notes</string>
     <string name="word_smart_7_txt">Orally recite definitions and key concepts</string>
+    <string name="challenge_icon">CHALLENGE</string>
 
 
 </resources>

@@ -18,7 +18,7 @@
             android:id="@+id/circle_image_view"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="50dp"
             android:alpha=".86"
             app:layout_constraintBottom_toBottomOf="parent"

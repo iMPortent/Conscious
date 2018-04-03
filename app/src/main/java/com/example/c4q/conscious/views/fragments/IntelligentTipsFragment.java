@@ -1,6 +1,7 @@
 package com.example.c4q.conscious.views.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -16,19 +17,21 @@ import com.brandongogetap.stickyheaders.exposed.StickyHeader;
 import com.brandongogetap.stickyheaders.exposed.StickyHeaderHandler;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
+import com.example.c4q.conscious.views.activities.GrowthChallengeActivity;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 import static java.lang.Math.E;
 
-public class IntelligentTipsFragment extends Fragment implements StickyHeaderHandler{
+public class IntelligentTipsFragment extends Fragment implements StickyHeaderHandler, View.OnClickListener {
 
 
     RecyclerView intelligentTipsRv;
-
+    CircleImageView challenge_circle;
     Context mContext;
 
-//    FloatingActionButton buttonToChallenge;
 
     @Override
     public List<?> getAdapterData() {
@@ -45,15 +48,25 @@ public class IntelligentTipsFragment extends Fragment implements StickyHeaderHan
 
         intelligentTipsRv = root.findViewById(R.id.intelligent_tips_rv);
 
+        challenge_circle = root.findViewById(R.id.circle_image_view);
+
         Intelligent_Tips_Adapter intelligentTipsAdapter = new Intelligent_Tips_Adapter();
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
         intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getContext()));
 
-//        buttonToChallenge.setBackgroundColor(1);
+        challenge_circle.setOnClickListener(v -> {
+            Intent intentToChallenges = new Intent(getActivity(), GrowthChallengeActivity.class);
+            startActivity(intentToChallenges);
+        });
+
 
         return root;
     }
 
+    @Override
+    public void onClick(View v) {
+        //When the fragment is clicked
+    }
 }
