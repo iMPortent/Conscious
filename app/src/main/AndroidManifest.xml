@@ -32,6 +32,8 @@
             android:name=".views.activities.OnBoardingActivity"
             android:label="@string/title_activity_on_boarding" />
         <activity android:name=".views.activities.RegistrationActivity" />
+        <activity android:name=".views.activities.OnboardingActivity" />
+        <activity android:name=".ChallengeDetailActivity" />
     </application>
 
 </manifest>

@@ -7,7 +7,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.os.Bundle;
 import android.util.Log;
+import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
@@ -39,6 +41,7 @@ public class MainActivity extends FragmentActivity {
         viewPager = findViewById(R.id.vpPager);
         adapterViewPager = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
+        viewPager.setPageTransformer(true, new DrawFromBackTransformer());
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
