@@ -46,6 +46,7 @@ public class IntelligentTipsFragment extends Fragment implements StickyHeaderHan
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
         // intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getSu));
+        intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return root;
     }
