@@ -80,8 +80,8 @@ public class MainActivity extends FragmentActivity {
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
-                new IntelligentTipsFragment(),
                 new HomeFragment(),
+                new IntelligentTipsFragment(),
                 new InterpersonalFragment(),
                 new SmartFragment(),
                 new FitnessFragment(),

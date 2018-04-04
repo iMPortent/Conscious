@@ -122,7 +122,6 @@
     <string name="play_again">Play Again</string>
 
 
-
     <!-- String resource values for IntelligentTipsFragments: -->
 
     <!-- App name strings:  -->
@@ -172,7 +171,6 @@
     <string name="number_smart_6_txt">Devise a mnemonic device to help remember methods or multi-faceted definitions/terms</string>
 
 
-
     <!-- People Smart Strings:  -->
     <string name="people_smart_description">Those who are people smart are good with relating to people. You enjoy going to parties, visiting with friends, and sharing what you learn</string>
     <string name="people_smart_1_txt">Discuss what you learn with a friend or family member</string>
@@ -182,7 +180,6 @@
     <string name="people_smart_5_txt">Avoid being alone when you try to study (only if your intrapersonal intelligence is weak)</string>
     <string name="people_smart_6_txt">Read about or watch videos on others’ ideas on difficult topics (Google, YouTube, etc.)</string>
     <string name="people_smart_7_txt">Share ideas with friends</string>
-
 
 
     <!-- Picture Smart Strings:  -->

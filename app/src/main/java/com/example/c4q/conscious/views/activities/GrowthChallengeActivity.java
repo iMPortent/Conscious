@@ -4,6 +4,7 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +21,7 @@ import com.example.c4q.conscious.model.Challenges;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class GrowthChallengeActivity extends AppCompatActivity implements ViewInterface, View.OnClickListener{
+public class GrowthChallengeActivity extends Fragment implements ViewInterface, View.OnClickListener{
 
     private static final String CHALLENGE_NAME = "CHALLENGE_NAME";
     private static final String CHALLENGE_MESSAGE = "CHALLENGE_MESSAGE";
