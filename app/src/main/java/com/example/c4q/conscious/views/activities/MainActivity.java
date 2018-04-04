@@ -24,12 +24,10 @@ public class MainActivity extends FragmentActivity {
     DatabaseReference myRef;
     TabLayout vPagerIcons;
     ViewPager viewPager;
-    private int[] tabIcons = {
-            R.drawable.ic_home_white_24dp,
-            R.drawable.ic_extension_white_24dp,
-            R.drawable.ic_arrow_upward_white_24dp,
-            R.drawable.ic_play_arrow_white_24dp,
-    };
+
+    private int[] tabIcons; // holds drawable images for the tab photos
+    private int[] tabText; // holds drawable txt for the tab text
+
 
 
     @Override
@@ -45,6 +43,25 @@ public class MainActivity extends FragmentActivity {
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
+
+
+        // tab icon resources
+        tabIcons = new int[]{
+                R.drawable.ic_extension_white_24dp,
+                R.drawable.ic_home_white_24dp,
+                R.drawable.ic_play_arrow_white_24dp,
+                R.drawable.ic_arrow_upward_white_24dp
+        };
+
+        // tab text resources
+        tabText = new int[]{
+                R.string.tab_1_txt,
+                R.string.tab_2_txt,
+                R.string.tab_3_txt,
+                R.string.tab_4_txt,
+        };
+
+
         setupTabIcons();
 
         database = FirebaseDatabase.getInstance();
@@ -66,21 +83,41 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-    private void setupTabIcons(){
-        vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
-        vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
-        vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+    private void setupTabIcons() {
+        for (int i = 0; i < vPagerIcons.getTabCount(); i++) {
+            TabLayout.Tab tab = vPagerIcons.getTabAt(i);
+            if (tab != null) {
+                try {
+
+                    // adds the icon + text to the tab:
+                    tab.setText(tabIcons[i]);
+                    tab.setIcon(tabText[i]);
+
+
+                } catch (Resources.NotFoundException n) {
+
+                    //  catch for the log
+                    Log.d(TAG, "setupTabIcons: " + n);
+                    Log.d(TAG, "setupTabText: " + n);
+
+                }
+            }
+        }
+
+        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
+        //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
+        //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
+        //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
 //        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+
 
     }
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
-                new HomeFragment(),
                 new IntelligentTipsFragment(),
-                new GrowthChallengeFragment(),
+                new HomeFragment(),
                 new SmartFragment()
 
         };

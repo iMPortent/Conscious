@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.model.IntelligenceTypeModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +40,7 @@ public class HomeIntelligentAdapter extends RecyclerView.Adapter<HomeIntelligent
     public HomeIntelligentAdapter.IntelligentTypeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         // create a new view:
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.it_type_cv,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.intelligent_type_cv,parent,false);
 
         IntelligentTypeViewHolder ITviewHolder = new IntelligentTypeViewHolder(view);
 

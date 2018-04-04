@@ -18,8 +18,6 @@ import com.example.c4q.conscious.model.TipsModel;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.widget.LinearLayout.VERTICAL;
-
 
 public class IntelligentTipsFragment extends Fragment {
 
@@ -28,7 +26,10 @@ public class IntelligentTipsFragment extends Fragment {
 
     Context mContext;
 
-    LinearLayoutManager linearLayoutManager;
+    @Override
+    public List<?> getAdapterData() {
+        return null;
+    }
 
     List<TipsModel> rvData;
 
@@ -38,7 +39,6 @@ public class IntelligentTipsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_intelligent_tips, container, false);
 
         mContext = getContext();
-
         intelligentTipsRv = (RecyclerView) root.findViewById(R.id.intelligent_tips_rv);
 
         rvData = new ArrayList<>();
@@ -99,12 +99,10 @@ public class IntelligentTipsFragment extends Fragment {
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
-                linearLayoutManager = new LinearLayoutManager(mContext, VERTICAL, false);
-
-        intelligentTipsRv.setLayoutManager(linearLayoutManager);
-
+        intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getContext()));
+        // intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getSu));
 
         return root;
     }
 
-    }
+}
