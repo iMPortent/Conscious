@@ -28,7 +28,10 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
 
-    private int[] tabIcons;
+    private int[] tabIcons; // holds drawable images for the tab photos
+    private int[] tabText; // holds drawable txt for the tab text
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +47,21 @@ public class MainActivity extends FragmentActivity {
         vPagerIcons.setupWithViewPager(viewPager);
 
 
+        // tab icon resources
         tabIcons = new int[]{
                 R.drawable.ic_extension_white_24dp,
                 R.drawable.ic_home_white_24dp,
                 R.drawable.ic_play_arrow_white_24dp,
+                R.drawable.ic_arrow_upward_white_24dp
         };
 
+        // tab text resources
+        tabText = new int[]{
+                R.string.tab_1_txt,
+                R.string.tab_2_txt,
+                R.string.tab_3_txt,
+                R.string.tab_4_txt,
+        };
 
 
         setupTabIcons();
@@ -78,10 +90,18 @@ public class MainActivity extends FragmentActivity {
             TabLayout.Tab tab = vPagerIcons.getTabAt(i);
             if (tab != null) {
                 try {
-                    tab.setIcon(tabIcons[i]);
+
+                    // adds the icon + text to the tab:
+                    tab.setText(tabIcons[i]);
+                    tab.setIcon(tabText[i]);
+
 
                 } catch (Resources.NotFoundException n) {
+
+                    //  catch for the log
                     Log.d(TAG, "setupTabIcons: " + n);
+                    Log.d(TAG, "setupTabText: " + n);
+
                 }
             }
         }
