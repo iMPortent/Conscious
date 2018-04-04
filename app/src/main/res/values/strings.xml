@@ -116,14 +116,17 @@
     <!-- String resource values for IntelligentTipsFragments: -->
 
     <!-- App name strings:  -->
-    <string name="body_smart_title_txt">Body Smart</string>
-    <string name="music_smart_title_txt">Music Smart</string>
-    <string name="nature_smart_title_txt">Nature Smart</string>
-    <string name="number_smart_title_txt">Number Smart</string>
-    <string name="people_smart_title_txt">People Smart</string>
-    <string name="picture_smart_title_txt">Picture Smart</string>
-    <string name="self_smart_title_txt">Self Smart</string>
-    <string name="word_smart_title_txt">Word Smart</string>
+    <string name="body_smart_title_txt">Bodily Spatial</string>
+    <string name="music_smart_title_txt">Musical</string>
+    <string name="nature_smart_title_txt">Naturalistic</string>
+    <string name="number_smart_title_txt">Logical Mathematical</string>
+    <string name="people_smart_title_txt">Intrapersonal</string>
+    <string name="picture_smart_title_txt">Spatial</string>
+    <string name="self_smart_title_txt">Interpersonal</string>
+    <string name="word_smart_title_txt">Linguistic</string>
+    <string name="existential_title_txt">Existential</string>
+
+    <string name="existential_smart_description">Existential People</string>
 
 
     <!-- Body Smart Strings: -->
