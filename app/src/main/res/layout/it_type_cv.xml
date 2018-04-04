@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <!-- intelligence type cardview-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/intelligent_type_cv"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <!-- layout inside of intelligence type view:-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorLightGrey"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <!-- intelligent type title text view: -->
+            <TextView
+                android:id="@+id/it_type_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Intelligence Type "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <!-- ends intelligent type title text view: -->
+
+            <!-- line image view: after title -->
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlack"
+                android:elevation="2dp">
+
+            </ImageView>
+            <!-- ends line image view: after title -->
+
+
+            <!-- description text view: -->
+            <TextView
+                android:id="@+id/it_type_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="description text "
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!-- ends description type text view: -->
+
+        </LinearLayout> <!-- ends cardview content linear layout  -->
+
+    </android.support.v7.widget.CardView>
+
+    <!-- horizonal linear layout for "careers" + "things to accomplish"  -->
+    <LinearLayout
+        android:id="@+id/box_ll"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intelligent_type_cv"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="2dp">
+
+            <!-- box image view: -->
+            <ImageView
+                android:id="@+id/it_box_1_iv"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:background="@color/colorElectricBlue"
+                android:clickable="true"
+                android:elevation="20dp">
+
+            </ImageView>
+            <!-- ends careers image view: -->
+
+            <!-- box image view: -->
+            <ImageView
+                android:id="@+id/it_type_photo"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorRaceRed"
+                android:clickable="true"
+                android:elevation="20dp">
+
+            </ImageView>
+            <!-- ends careers image view: -->
+
+            <!-- add icon layout  -->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_weight="0.8"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:id="@+id/image_action_like"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:src="@drawable/add_icon_it" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- ends horizonal linear layout for "careers" + "things to accomplish"  -->
+
+</RelativeLayout>

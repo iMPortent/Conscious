@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.c4q.conscious"
-        minSdkVersion 23
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,8 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
     }
 }
 
@@ -45,6 +47,7 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
     compile 'com.brandongogetap:stickyheaders:0.5.0'
 }
+
 
 
 

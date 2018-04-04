@@ -7,6 +7,7 @@ import android.widget.ImageView;
 
 import com.example.c4q.conscious.views.activities.LoginActivity;
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.views.activities.MainActivity;
 
 public class SplashActivity extends Activity {
 
@@ -19,14 +20,14 @@ public class SplashActivity extends Activity {
 
         splash_logo = findViewById(R.id.splash_logo);
 
-        Thread timerThread = new Thread(){
-            public void run(){
-                try{
+        Thread timerThread = new Thread() {
+            public void run() {
+                try {
                     sleep(1000);
-                }catch(InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
-                }finally{
-                    Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+                } finally {
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
             }

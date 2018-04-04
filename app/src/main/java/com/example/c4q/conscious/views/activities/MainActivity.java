@@ -1,5 +1,6 @@
 package com.example.c4q.conscious.views.activities;
 
+import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
+
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.GrowthChallengeFragment;
 import com.example.c4q.conscious.views.fragments.HomeFragment;
@@ -26,13 +28,7 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
 
-    private int[] tabIcons = {
-            R.drawable.ic_home_white_24dp,
-            R.drawable.ic_extension_white_24dp,
-            R.drawable.ic_arrow_upward_white_24dp,
-            R.drawable.ic_play_arrow_white_24dp,
-    };
-
+    private int[] tabIcons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +42,12 @@ public class MainActivity extends FragmentActivity {
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
+        tabIcons = new int[]{
+                R.drawable.ic_home_white_24dp,
+                R.drawable.ic_extension_white_24dp,
+                R.drawable.ic_arrow_upward_white_24dp,
+                R.drawable.ic_play_arrow_white_24dp,
+        };
         setupTabIcons();
 
         database = FirebaseDatabase.getInstance();
@@ -67,13 +69,23 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-    private void setupTabIcons(){
-        vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
-        vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
-        vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
-//        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+    private void setupTabIcons() {
+        for (int i = 0; i < vPagerIcons.getTabCount(); i++) {
+            TabLayout.Tab tab = vPagerIcons.getTabAt(i);
+            if (tab != null) {
+                try {
+                    tab.setIcon(tabIcons[i]);
+                } catch (Resources.NotFoundException n) {
+                    Log.d(TAG, "setupTabIcons: " + n);
+                }
+            }
+        }
 
+        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
+        //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
+        //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
+        //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+//        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
 
     }
 
