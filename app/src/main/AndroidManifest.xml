@@ -24,14 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.activities.GrowthChallengeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".views.activities.WelcomeActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".views.activities.LoginActivity" />
          <!-- <activity android:name=".views.activities.OnboardingActivity" /> -->
@@ -39,6 +31,12 @@
             android:name=".views.activities.OnBoardingActivity"
             android:label="@string/title_activity_on_boarding" />
         <activity android:name=".views.activities.RegistrationActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".views.activities.FirstWelcomeActivity"></activity>
         <activity android:name=".views.activities.OnboardingActivity" />
         <activity android:name=".ChallengeDetailActivity" />
     </application>

@@ -1,6 +1,6 @@
 package com.example.c4q.conscious.views.activities;
 
-import android.os.Bundle;
+import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -72,7 +72,6 @@ public class MainActivity extends FragmentActivity {
         vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
         vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
 //        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
-
 
     }
 
