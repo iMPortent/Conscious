@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <!-- intelligence type cardview-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/intelligent_type_cv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!-- horizontal linear layout for image view + textview -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/it_type_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/it_nature_iv" />
+
+            <!-- layout inside of intelligence type view:-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <!-- intelligent type title text view: -->
+                <TextView
+                    android:id="@+id/it_type_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Intelligence Type "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <!-- ends intelligent type title text view: -->
+
+                <!-- line image view: after title -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorBlack"
+                    android:elevation="2dp">
+
+                </ImageView>
+                <!-- ends line image view: after title -->
+
+                <!-- ends careers image view: -->
+
+            </LinearLayout> <!-- ends cardview content linear layout  -->
+
+
+        </LinearLayout> <!-- ends horizontal linear layout ->
+
+
+            <!- box image view: -->
+        <Button
+            android:id="@+id/it_box_1_iv"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorBlack"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:text="MORE"
+            android:textSize="20sp">
+
+        </Button>
+        </LinearLayout> <!-- ends vertical linear layout-->
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

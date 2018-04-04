@@ -28,14 +28,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="41dp"
                 android:text="type"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_weight="1"/>
 
            <ImageButton
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="@string/app_name"
-               android:id="@+id/enter_challenges_button"
-               android:src="@drawable/blue_drawable"/>
+               android:id="@+id/enter_intel_type_button"
+               android:src="@drawable/blue_drawable"
+               android:layout_weight="3"/>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

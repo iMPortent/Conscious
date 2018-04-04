@@ -1,17 +1,15 @@
 package com.example.c4q.conscious.model;
 
-import android.widget.ImageView;
+import android.graphics.drawable.Drawable;
 
 public class TipsModel {
 
     String intelligentType;
-    ImageView challengesImageView;
-    ImageView currentImageView;
+    Drawable enterIntelType;
 
-    public TipsModel(String intelligentType, ImageView challengesImageView, ImageView currentImageView) {
+    public TipsModel(String intelligentType, Drawable enterIntelType) {
         this.intelligentType = intelligentType;
-        this.challengesImageView = challengesImageView;
-        this.currentImageView = currentImageView;
+        this.enterIntelType = enterIntelType;
     }
 
     public TipsModel(String intelligentType) {
@@ -22,12 +20,8 @@ public class TipsModel {
         return intelligentType;
     }
 
-    public ImageView getChallengesImageView() {
-        return challengesImageView;
-    }
-
-    public ImageView getCurrentImageView() {
-        return currentImageView;
+    public Drawable getEnterIntelType() {
+        return enterIntelType;
     }
 
 

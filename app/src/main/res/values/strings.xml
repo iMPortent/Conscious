@@ -8,6 +8,7 @@
     <string name="sign_up">sign Up</string>
     <string name="remember_check_bx">Remember Login</string>
     <string name="body_smart">Body Smart</string>
+    <string name="existential">Existential</string>
     <string name="music_smart">Music Smart</string>
     <string name="nature_smart">Nature Smart</string>
     <string name="number_smart">Number Smart</string>
@@ -106,7 +107,7 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-    <string name="slide_1_title">Welcome Consciousness</string>
+    <string name="slide_1_title">Welcome To Conscious</string>
     <string name="slide_1_desc">The easiest way to impact your current intelligence and build different types of intelligence types!</string>
 
     <string name="slide_2_title">Build Multiple Intelligences</string>
@@ -122,18 +123,23 @@
     <string name="play_again">Play Again</string>
 
 
+    <string name="slide_title_txt">HEADER</string>
+    <string name="slide_description_txt">DESCRIPTIONNNNN </string>
 
     <!-- String resource values for IntelligentTipsFragments: -->
 
     <!-- App name strings:  -->
-    <string name="body_smart_title_txt">Body Smart</string>
-    <string name="music_smart_title_txt">Music Smart</string>
-    <string name="nature_smart_title_txt">Nature Smart</string>
-    <string name="number_smart_title_txt">Number Smart</string>
-    <string name="people_smart_title_txt">People Smart</string>
-    <string name="picture_smart_title_txt">Picture Smart</string>
-    <string name="self_smart_title_txt">Self Smart</string>
-    <string name="word_smart_title_txt">Word Smart</string>
+    <string name="body_smart_title_txt">Bodily Spatial</string>
+    <string name="music_smart_title_txt">Musical</string>
+    <string name="nature_smart_title_txt">Naturalistic</string>
+    <string name="number_smart_title_txt">Logical Mathematical</string>
+    <string name="people_smart_title_txt">Intrapersonal</string>
+    <string name="picture_smart_title_txt">Spatial</string>
+    <string name="self_smart_title_txt">Interpersonal</string>
+    <string name="word_smart_title_txt">Linguistic</string>
+    <string name="existential_title_txt">Existential</string>
+
+    <string name="existential_smart_description">Existential People</string>
 
 
     <!-- Body Smart Strings: -->
@@ -172,7 +178,6 @@
     <string name="number_smart_6_txt">Devise a mnemonic device to help remember methods or multi-faceted definitions/terms</string>
 
 
-
     <!-- People Smart Strings:  -->
     <string name="people_smart_description">Those who are people smart are good with relating to people. You enjoy going to parties, visiting with friends, and sharing what you learn</string>
     <string name="people_smart_1_txt">Discuss what you learn with a friend or family member</string>
@@ -182,7 +187,6 @@
     <string name="people_smart_5_txt">Avoid being alone when you try to study (only if your intrapersonal intelligence is weak)</string>
     <string name="people_smart_6_txt">Read about or watch videos on others’ ideas on difficult topics (Google, YouTube, etc.)</string>
     <string name="people_smart_7_txt">Share ideas with friends</string>
-
 
 
     <!-- Picture Smart Strings:  -->
@@ -214,5 +218,41 @@
     <string name="word_smart_6_txt">Re-organize class notes</string>
     <string name="word_smart_7_txt">Orally recite definitions and key concepts</string>
 
+
+    <!-- Intelligence Adapter Strings:-->
+    <string name="intelligent_type_description">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_1_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_2_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_3_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_4_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_5_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_6_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_7_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_8_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_9_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+
+    <!-- Intelligence Type Title strings:  -->
+    <string name="it_title_txt">Bodily - Spatial</string>
+    <string name="it_title_txt_2">Musical</string>
+    <string name="it_title_txt_3">Naturalistic</string>
+    <string name="it_title_txt_4">Logical - Mathematical</string>
+    <string name="it_title_txt_5">InterPersonal</string>
+    <string name="it_title_txt_6">Visual - Spatial</string>
+    <string name="it_title_txt_7">IntraPersonal</string>
+    <string name="it_title_txt_8">Verbal Linguistic</string>
+    <string name="it_title_txt_9">Linguistic Smart</string>
+
+    <string name="it_description_txt">Word Smart</string>
+    <string name="it_description_txt_2">Word Smart</string>
+    <string name="it_description_txt_3">Word Smart</string>
+    <string name="it_description_txt_4">Word Smart</string>
+    <string name="it_description_txt_5">Word Smart</string>
+    <string name="it_description_txt_6">Word Smart</string>
+    <string name="it_description_txt_7">Word Smart</string>
+    <string name="it_description_txt_8">Word Smart</string>
+    <string name="it_description_txt_9">Word Smart</string>
+
+
+    <string name="intelligence_type">Intelligence Type </string>
 
 </resources>

@@ -7,35 +7,25 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.bumptech.glide.load.engine.Resource;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.controller.Intelligent_Tips_Adapter;
+import com.example.c4q.conscious.controller.IntelligentTipsAdapter;
 import com.example.c4q.conscious.model.TipsModel;
-import com.example.c4q.conscious.views.activities.GrowthChallengeActivity;
-import com.example.c4q.conscious.views.activities.MainActivity;
-import com.example.c4q.conscious.views.activities.WelcomeActivity;
-import static com.example.c4q.conscious.views.activities.MainActivity.intelligenceTypePicked2;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.widget.LinearLayout.VERTICAL;
 
 
 public class IntelligentTipsFragment extends Fragment {
 
     static RecyclerView intelligentTipsRv;
     static Context mContext;
-    static GridLayoutManager gridLayoutManager;
     static ImageButton enterChallengesButton;
     static List<TipsModel> rvData;
     static Intent sendToChallenges;
@@ -51,7 +41,7 @@ public class IntelligentTipsFragment extends Fragment {
 
         intelligentTipsRv = (RecyclerView) root.findViewById(R.id.intelligent_tips_rv);
 
-        enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_challenges_button);
+        enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_intel_type_button);
 
         intelligenceType = (TextView) root.findViewById(R.id.type_of_intelligence);
 
@@ -59,21 +49,22 @@ public class IntelligentTipsFragment extends Fragment {
 
         rvData = new ArrayList<>();
 
-        rvData.add( new TipsModel(getString(R.string.body_smart)));
-        rvData.add( new TipsModel(getString(R.string.music_smart)));
-        rvData.add( new TipsModel(getString(R.string.nature_smart)));
-        rvData.add( new TipsModel(getString(R.string.number_smart)));
-        rvData.add( new TipsModel(getString(R.string.people_smart)));
-        rvData.add( new TipsModel(getString(R.string.picture_smart)));
-        rvData.add( new TipsModel(getString(R.string.self_smart)));
-        rvData.add( new TipsModel(getString(R.string.word_smart)));
+        rvData.add( new TipsModel(getString(R.string.body_smart),getResources().getDrawable(R.drawable.it_body_iv)));
+        rvData.add( new TipsModel(getString(R.string.existential),getResources().getDrawable(R.drawable.it_existential_iv)));
+        rvData.add( new TipsModel(getString(R.string.music_smart),getResources().getDrawable(R.drawable.it_musical_iv)));
+        rvData.add( new TipsModel(getString(R.string.nature_smart),getResources().getDrawable(R.drawable.it_nature_iv)));
+        rvData.add( new TipsModel(getString(R.string.number_smart),getResources().getDrawable(R.drawable.it_math_iv)));
+        rvData.add( new TipsModel(getString(R.string.people_smart),getResources().getDrawable(R.drawable.it_people_iv)));
+        rvData.add( new TipsModel(getString(R.string.picture_smart),getResources().getDrawable(R.drawable.it_spatial_iv)));
+        rvData.add( new TipsModel(getString(R.string.self_smart),getResources().getDrawable(R.drawable.it_self_iv)));
+        rvData.add( new TipsModel(getString(R.string.word_smart),getResources().getDrawable(R.drawable.it_word_iv)));
 
 
               //  gridLayoutManager = new GridLayoutManager(mContext, , false);
 
         intelligentTipsRv.setLayoutManager( new GridLayoutManager(mContext, 3));
 
-        Intelligent_Tips_Adapter intelligentTipsAdapter = new Intelligent_Tips_Adapter(rvData);
+        IntelligentTipsAdapter intelligentTipsAdapter = new IntelligentTipsAdapter(rvData);
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
