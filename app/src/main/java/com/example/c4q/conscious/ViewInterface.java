@@ -13,14 +13,6 @@ import java.util.List;
 public interface ViewInterface {
 
     void startChallengeDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot);
-
-    void setUpAdapterAndView(List<Challenges> listOfData);
-
-    void addNewChallengeToView(Challenges newItem);
-
-    void deleteChallengeAt(int position);
-
-    void showUndoSnackbar();
-
-    void insertChallengeAt(int temporaryListItemPosition, Challenges temporaryListItem);
+    void startChallenge(View view);
+    void completeChallenge(View view);
 }

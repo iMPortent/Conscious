@@ -2,38 +2,38 @@ package com.example.c4q.conscious.model;
 
 public class Challenges {
 
-    private String dateAndTime;
-    private String message;
-    private int colorResource;
+    private String challenge_name;
+    private String challenge_detail;
+    private int challenge_color_resource;
 
     public Challenges(String dateAndTime, String message, int colorResource) {
-        this.dateAndTime = dateAndTime;
-        this.message = message;
-        this.colorResource = colorResource;
+        this.challenge_name = dateAndTime;
+        this.challenge_detail = message;
+        this.challenge_color_resource = colorResource;
     }
 
-    public int getColorResource() {
-        return colorResource;
+    public int getChallenge_color_resource() {
+        return challenge_color_resource;
     }
 
-    public void setColorResource(int colorResource) {
-        this.colorResource = colorResource;
+    public void setChallenge_color_resource(int challenge_color_resource) {
+        this.challenge_color_resource = challenge_color_resource;
     }
 
-    public String getDateAndTime() {
-        return dateAndTime;
+    public String getChallenge_name() {
+        return challenge_name;
     }
 
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
+    public void setChallenge_name(String challenge_name) {
+        this.challenge_name = challenge_name;
     }
 
 
-    public String getMessage() {
-        return message;
+    public String getChallenge_detail() {
+        return challenge_detail;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setChallenge_detail(String challenge_detail) {
+        this.challenge_detail = challenge_detail;
     }
 }

@@ -4,19 +4,12 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.BaseTransientBottomBar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.example.c4q.conscious.ChallengeDataSource;
 import com.example.c4q.conscious.ChallengeDetailActivity;
@@ -29,30 +22,30 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class GrowthChallengeActivity extends AppCompatActivity implements ViewInterface, View.OnClickListener{
 
-    private static final String EXTRA_DATE_AND_TIME = "EXTRA_DATE_AND_TIME";
-    private static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
-    private static final String EXTRA_DRAWABLE = "EXTRA_DRAWABLE";
+    private static final String CHALLENGE_NAME = "CHALLENGE_NAME";
+    private static final String CHALLENGE_MESSAGE = "CHALLENGE_MESSAGE";
+    private static final String CHALLENGE_DRAWABLE = "CHALLENGE_DRAWABLE";
     private List<Challenges> listOfData;
     private LayoutInflater layoutInflater;
-    private RecyclerView recyclerView;
     private GrowthChallengeAdapter growthChallengeAdapter;
     private GrowthChallengeController growthChallengeController;
-//    private Toolbar toolbar;
+
+    CardView cardView;
+    CircleImageView circleImageView;
+    TextView tv1;
+    TextView tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_growth_challenge);
 
-        recyclerView = findViewById(R.id.rec_list_activity);
         layoutInflater = getLayoutInflater();
-//        toolbar = findViewById(R.id.tlb_list_activity);
-//        toolbar.setTitle(R.string.title_toolbar);
-//        toolbar.setLogo(R.drawable.list_icon);
-//        toolbar.setTitleMarginStart(72);
 
-        FloatingActionButton fabulous = findViewById(R.id.fab_create_new_item);
-        fabulous.setOnClickListener(this);
+        cardView = findViewById(R.id.pfeed_card_view1);
+        circleImageView = findViewById(R.id.circle_image_view);
+        tv1 = findViewById(R.id.challenge_name_tv);
+        tv2 = findViewById(R.id.challenge_tv);
 
         growthChallengeController = new GrowthChallengeController(this, new ChallengeDataSource());
     }
@@ -60,11 +53,11 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
     @Override
     public void startChallengeDetailActivity(String dateAndTime, String message, int colorResource, View viewRoot) {
         Intent i = new Intent(this, ChallengeDetailActivity.class);
-        i.putExtra(EXTRA_DATE_AND_TIME, dateAndTime);
-        i.putExtra(EXTRA_MESSAGE, message);
-        i.putExtra(EXTRA_DRAWABLE, colorResource);
+        i.putExtra(CHALLENGE_NAME, dateAndTime);
+        i.putExtra(CHALLENGE_MESSAGE, message);
+        i.putExtra(CHALLENGE_DRAWABLE, colorResource);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setEnterTransition(new android.transition.Fade(android.transition.Fade.IN));
             getWindow().setEnterTransition(new android.transition.Fade(android.transition.Fade.OUT));
 
@@ -82,84 +75,21 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
     }
 
     @Override
-    public void setUpAdapterAndView(List<Challenges> listOfData) {
-        this.listOfData = listOfData;
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-        recyclerView.setLayoutManager(layoutManager);
-
-        growthChallengeAdapter = new GrowthChallengeAdapter();
-        recyclerView.setAdapter(growthChallengeAdapter);
-
-        DividerItemDecoration itemDecoration = new DividerItemDecoration(
-                recyclerView.getContext(),
-                layoutManager.getOrientation()
-        );
-
-        itemDecoration.setDrawable(
-                ContextCompat.getDrawable(
-                        this,
-                        R.drawable.divider_white
-                )
-        );
-
-        recyclerView.addItemDecoration(
-                itemDecoration
-        );
-
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(createHelperCallback());
-        itemTouchHelper.attachToRecyclerView(recyclerView);
-
-
+    public void startChallenge(View view) {
+        //when start challenge ...
     }
 
     @Override
-    public void addNewChallengeToView(Challenges newItem) {
-
-    }
-
-    @Override
-    public void deleteChallengeAt(int position) {
-
-    }
-
-    @Override
-    public void showUndoSnackbar() {
-        Snackbar.make(
-                findViewById(R.id.root_main_activity),
-                getString(R.string.action_delete_item),
-                Snackbar.LENGTH_LONG
-        )
-                .setAction(R.string.action_undo, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        growthChallengeController.onUndoConfirmed();
-                    }
-                })
-                .addCallback(new BaseTransientBottomBar.BaseCallback<Snackbar>() {
-                    @Override
-                    public void onDismissed(Snackbar transientBottomBar, int event) {
-                        super.onDismissed(transientBottomBar, event);
-
-                        growthChallengeController.onSnackbarTimeout();
-                    }
-                })
-                .show();
-    }
-
-    @Override
-    public void insertChallengeAt(int temporaryListItemPosition, Challenges temporaryListItem) {
-
+    public void completeChallenge(View view) {
+        //when complete challenge ...
     }
 
 
     @Override
     public void onClick(View v) {
-        int viewId = v.getId();
-        if (viewId == R.id.fab_create_new_item) {
-            growthChallengeController.createNewChallenge();
-        }
+
     }
+
 
     private class GrowthChallengeAdapter extends RecyclerView.Adapter<GrowthChallengeAdapter.GrowthChallengeViewholder> {//6
 
@@ -171,22 +101,17 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
 
         @Override
         public void onBindViewHolder(GrowthChallengeViewholder holder, int position) {
-            //11. and now the ViewHolder data
+
             Challenges currentItem = listOfData.get(position);
 
-            holder.coloredCircle.setImageResource(
-                    currentItem.getColorResource()
+            holder.challenge_circle.setImageResource(
+                    currentItem.getChallenge_color_resource()
             );
 
-            holder.message.setText(
-                    currentItem.getMessage()
+            holder.challenge_message.setText(
+                    currentItem.getChallenge_name()
             );
 
-            holder.dateAndTime.setText(
-                    currentItem.getDateAndTime()
-            );
-
-            holder.loading.setVisibility(View.INVISIBLE);
         }
 
         @Override
@@ -196,17 +121,14 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
 
         class GrowthChallengeViewholder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            private CircleImageView coloredCircle;
-            private TextView dateAndTime;
-            private TextView message;
+            private CircleImageView challenge_circle;
+            private TextView challenge_message;
             private ViewGroup container;
-            private ProgressBar loading;
 
             public GrowthChallengeViewholder(View itemView) {
                 super(itemView);
-                this.coloredCircle = itemView.findViewById(R.id.circle_image_view);
-                this.dateAndTime = itemView.findViewById(R.id.challenge_name_tv);
-                this.message = itemView.findViewById(R.id.challenge_tv);
+                this.challenge_circle = itemView.findViewById(R.id.circle_image_view);
+                this.challenge_message = itemView.findViewById(R.id.challenge_name_tv);
                 this.container = itemView.findViewById(R.id.root_main_item);
                 this.container.setOnClickListener(this);
             }
@@ -225,32 +147,4 @@ public class GrowthChallengeActivity extends AppCompatActivity implements ViewIn
             }
         }
     }
-
-    private ItemTouchHelper.Callback createHelperCallback() {
-
-        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(
-                0,
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-
-
-            @Override
-            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
-                                  RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-
-            @Override
-            public void onSwiped(final RecyclerView.ViewHolder viewHolder, int swipeDir) {
-                int position = viewHolder.getAdapterPosition();
-                growthChallengeController.onChallengeSwiped(
-                        position,
-                        listOfData.get(position)
-                );
-            }
-        };
-
-        return simpleItemTouchCallback;
-    }
-
 }

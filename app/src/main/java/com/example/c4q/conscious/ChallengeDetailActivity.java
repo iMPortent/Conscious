@@ -8,12 +8,11 @@ import android.widget.TextView;
 
 public class ChallengeDetailActivity extends AppCompatActivity {
 
-    private static final String EXTRA_DATE_AND_TIME = "EXTRA_DATE_AND_TIME";
-    private static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
-    private static final String EXTRA_DRAWABLE = "EXTRA_DRAWABLE";
-
-    private TextView dateAndTime;
-    private TextView message;
+    private static final String CHALLENGE_NAME = "CHALLENGE_NAME";
+    private static final String CHALLENGE_MESSAGE = "CHALLENGE_MESSAGE";
+    private static final String CHALLENGE_DRAWABLE = "CHALLENGE_DRAWABLE";
+    private TextView challenge_name;
+    private TextView challenge_detail;
     private View coloredBackground;
 
     @Override
@@ -22,19 +21,20 @@ public class ChallengeDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_challenge_detail);
 
         Intent i = getIntent();
-        String dateAndTimeExtra = i.getStringExtra(EXTRA_DATE_AND_TIME);
-        String messageExtra = i.getStringExtra(EXTRA_MESSAGE);
-        int drawableResourceExtra = i.getIntExtra(EXTRA_DRAWABLE, 0);
+        String dateAndTimeExtra = i.getStringExtra(CHALLENGE_NAME);
+        String messageExtra = i.getStringExtra(CHALLENGE_MESSAGE);
+        int drawableResourceExtra = i.getIntExtra(CHALLENGE_DRAWABLE, 0);
 
-        dateAndTime = findViewById(R.id.lbl_date_and_time_header);
-        dateAndTime.setText(dateAndTimeExtra);
+        challenge_name = findViewById(R.id.challenge_name);
+        challenge_name.setText(dateAndTimeExtra);
 
-        message = findViewById(R.id.lbl_message_body);
-        message.setText(messageExtra);
+        challenge_detail = findViewById(R.id.challenge_detail);
+        challenge_detail.setText(messageExtra);
 
         coloredBackground = findViewById(R.id.imv_colored_background);
         coloredBackground.setBackgroundResource(
                 drawableResourceExtra
         );
+
     }
 }
