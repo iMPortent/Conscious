@@ -77,8 +77,8 @@ public class HomeIntelligentAdapter extends RecyclerView.Adapter<HomeIntelligent
             super(itemView);
 
             intelligentTypeName = (TextView)itemView.findViewById(R.id.it_type_title);
-            intelligentTypeDescription = (TextView)itemView.findViewById(R.id.it_type_description);
-            intelligentTypePhoto = (ImageView) itemView.findViewById(R.id.it_type_photo);
+            //intelligentTypeDescription = (TextView)itemView.findViewById(R.id.it_type_description);
+            //intelligentTypePhoto = (ImageView) itemView.findViewById(R.id.it_type_photo);
 
         }
 
