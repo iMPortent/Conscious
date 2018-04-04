@@ -42,12 +42,16 @@ public class MainActivity extends FragmentActivity {
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
+
+
         tabIcons = new int[]{
-                R.drawable.ic_home_white_24dp,
                 R.drawable.ic_extension_white_24dp,
-                R.drawable.ic_arrow_upward_white_24dp,
+                R.drawable.ic_home_white_24dp,
                 R.drawable.ic_play_arrow_white_24dp,
         };
+
+
+
         setupTabIcons();
 
         database = FirebaseDatabase.getInstance();
@@ -75,6 +79,7 @@ public class MainActivity extends FragmentActivity {
             if (tab != null) {
                 try {
                     tab.setIcon(tabIcons[i]);
+
                 } catch (Resources.NotFoundException n) {
                     Log.d(TAG, "setupTabIcons: " + n);
                 }
@@ -87,14 +92,14 @@ public class MainActivity extends FragmentActivity {
         //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
 //        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
 
+
     }
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
-                new HomeFragment(),
                 new IntelligentTipsFragment(),
-                new GrowthChallengeFragment(),
+                new HomeFragment(),
                 new SmartFragment()
 
         };
