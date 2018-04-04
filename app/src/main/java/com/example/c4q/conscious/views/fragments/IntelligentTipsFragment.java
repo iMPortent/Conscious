@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -34,7 +35,7 @@ public class IntelligentTipsFragment extends Fragment {
 
     static RecyclerView intelligentTipsRv;
     static Context mContext;
-    static LinearLayoutManager linearLayoutManager;
+    static GridLayoutManager gridLayoutManager;
     static ImageButton enterChallengesButton;
     static List<TipsModel> rvData;
     static Intent sendToChallenges;
@@ -67,15 +68,16 @@ public class IntelligentTipsFragment extends Fragment {
         rvData.add( new TipsModel(getString(R.string.self_smart)));
         rvData.add( new TipsModel(getString(R.string.word_smart)));
 
+
+              //  gridLayoutManager = new GridLayoutManager(mContext, , false);
+
+        intelligentTipsRv.setLayoutManager( new GridLayoutManager(mContext, 3));
+
         Intelligent_Tips_Adapter intelligentTipsAdapter = new Intelligent_Tips_Adapter(rvData);
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
-                linearLayoutManager = new LinearLayoutManager(mContext, VERTICAL, false);
-
-        intelligentTipsRv.setLayoutManager(linearLayoutManager);
-
-        enterChallengesButton.setOnClickListener(new View.OnClickListener() {
+     /*   enterChallengesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -86,14 +88,14 @@ public class IntelligentTipsFragment extends Fragment {
 
 //Inflate the fragment
                 getFragmentManager().beginTransaction().add(R.id.container, growthChallengeFragment).commit();
-                sendToChallenges = new Intent(mContext, GrowthChallengeActivity.class); */
+                sendToChallenges = new Intent(mContext, GrowthChallengeActivity.class);
                 intelligenceTypePicked2 = intelligenceType.getText().toString();
             }
-        });
+        }); */
 
 
                 return root;
             }
 
-            public void itemSelected(){}
+           // public void itemSelected(){}
 }

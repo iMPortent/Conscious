@@ -1,5 +1,8 @@
 package com.example.c4q.conscious.views.activities;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,8 +11,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.views.fragments.GrowthChallengeFragment;
 import com.example.c4q.conscious.views.fragments.HomeFragment;
 import com.example.c4q.conscious.views.fragments.IntelligentTipsFragment;
 import com.example.c4q.conscious.views.fragments.SmartFragment;
@@ -26,6 +32,9 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
     public static String intelligenceTypePicked2 = "";
+    static ImageButton enterChallengesButton;
+    static Context mContext;
+    static TextView intelligenceType;
 
 
     private int[] tabIcons = {
@@ -42,6 +51,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: ran before frag");
 
+        mContext = getApplicationContext();
         viewPager = findViewById(R.id.vpPager);
         adapterViewPager = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
@@ -54,6 +64,21 @@ public class MainActivity extends FragmentActivity {
         myRef = database.getReference("message");
         myRef.setValue("Hey");
 
+        enterChallengesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mContext,GrowthChallengeActivity.class);
+                intent.putExtra("IntelligenceType", intelligenceType.getText().toString());
+                startActivity(intent);
+               /* growthChallengeFragment.setArguments(args);
+
+//Inflate the fragment
+                getFragmentManager().beginTransaction().add(R.id.container, growthChallengeFragment).commit();
+                sendToChallenges = new Intent(mContext, GrowthChallengeActivity.class); */
+                intelligenceTypePicked2 = intelligenceType.getText().toString();
+            }
+        });
     }
 
     @Override

@@ -1,9 +1,11 @@
 package com.example.c4q.conscious.controller;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,18 +24,21 @@ public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_T
         this.tipsList = tipsList;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
+        private static final String TAG = "tag";
         TextView type;
         ImageView accomplishedImageView;
         ImageView currentChallengesInProgress;
         ImageButton enterChallengesButton;
+        String typeSelected;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             type = itemView.findViewById(R.id.type_of_intelligence);
+            typeSelected = type.getText().toString();
             accomplishedImageView = itemView.findViewById(R.id.accomplishment_image);
             currentChallengesInProgress = itemView.findViewById(R.id.current_in_progress_image_view);
             enterChallengesButton = itemView.findViewById(R.id.enter_challenges_button);
@@ -44,6 +49,15 @@ public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_T
             //challengesImageView;
             //currentChallengesInProgress;
 
+        }
+
+        public void setItem(String type){
+            typeSelected = type;
+        }
+
+        @Override
+        public void onClick(View v) {
+            Log.d(TAG, "onClick " + getAdapterPosition() + " " + typeSelected);
         }
     }
 
