@@ -87,6 +87,7 @@ public class MainActivity extends FragmentActivity {
 
     private void setupTabIcons() {
         for (int i = 0; i < vPagerIcons.getTabCount(); i++) {
+            Log.d(TAG, "TabIcons: " + vPagerIcons);
             TabLayout.Tab tab = vPagerIcons.getTabAt(i);
             if (tab != null) {
                 try {
@@ -150,7 +151,9 @@ public class MainActivity extends FragmentActivity {
         @Override
         public int getCount() {
             return pages.length;
+
         }
+
     }
 
 }

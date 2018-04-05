@@ -15,13 +15,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.engage.model.Challenges;
 import com.example.c4q.conscious.smart.ViewInterface;
 
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class GrowthChallengeFragment extends Fragment implements ViewInterface, View.OnClickListener {
+/*public class GrowthChallengeFragment extends Fragment implements ViewInterface, View.OnClickListener {
 
     private static final String CHALLENGE_NAME = "CHALLENGE_NAME";
     private static final String CHALLENGE_MESSAGE = "CHALLENGE_MESSAGE";
@@ -30,6 +31,7 @@ public class GrowthChallengeFragment extends Fragment implements ViewInterface, 
     private LayoutInflater layoutInflater;
     private GrowthChallengeAdapter growthChallengeAdapter;
     private GrowthChallengeController growthChallengeController;
+    Challenges listItem;
 
     CardView cardView;
     CircleImageView circleImageView;
@@ -108,15 +110,12 @@ public class GrowthChallengeFragment extends Fragment implements ViewInterface, 
         public void onBindViewHolder(GrowthChallengeViewholder holder, int position) {
 
             Challenges currentItem = listOfData.get(position);
-
             holder.challenge_circle.setImageResource(
                     currentItem.getChallenge_color_resource()
             );
-
             holder.challenge_message.setText(
                     currentItem.getChallenge_name()
             );
-
         }
 
         @Override
@@ -140,16 +139,11 @@ public class GrowthChallengeFragment extends Fragment implements ViewInterface, 
 
             @Override
             public void onClick(View v) {
-                Challenges listItem = listOfData.get(
+                listItem = listOfData.get(
                         this.getAdapterPosition()
                 );
-
-                growthChallengeController.onChallengeClick(
-                        listItem,
-                        v
-                );
-
+                growthChallengeController.onChallengeClick(listItem, v);
             }
         }
     }
-}
+} */

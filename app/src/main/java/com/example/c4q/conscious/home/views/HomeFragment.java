@@ -80,55 +80,55 @@ public class HomeFragment extends Fragment {
 
         // type 1 : bodily:
         type1 = new IntelligenceTypeModel(
-                R.string.body_smart_title_txt,
+                R.string.body_smart,
                 R.drawable.it_nature_iv,
                 R.string.body_smart_description);
 
         // type 2 : Existential
         type2 = new IntelligenceTypeModel(
-                R.string.music_smart_title_txt,
+                R.string.music_smart,
                 R.drawable.it_nature_iv,
                 R.string.music_smart_description);
 
         // type 3 : Musical:
         type3 = new IntelligenceTypeModel(
-                R.string.nature_smart_title_txt,
+                R.string.nature_smart,
                 R.drawable.it_nature_iv,
                 R.string.nature_smart_description);
 
         // type 4 : Naturalist:
         type4 = new IntelligenceTypeModel(
-                R.string.number_smart_title_txt,
+                R.string.number_smart,
                 R.drawable.it_nature_iv,
                 R.string.number_smart_description);
 
         // type 5 : Logical- Mathematical:
         type5 = new IntelligenceTypeModel(
-                R.string.people_smart_title_txt,
+                R.string.people_smart,
                 R.drawable.it_nature_iv,
                 R.string.people_smart_description);
 
         // type 6 : Spatial: picture
         type6 = new IntelligenceTypeModel(
-                R.string.picture_smart_title_txt,
+                R.string.picture_smart,
                 R.drawable.it_nature_iv,
                 R.string.picture_smart_description);
 
         // type 7 : Interpersonal - people :
         type7 = new IntelligenceTypeModel(
-                R.string.self_smart_title_txt,
+                R.string.nature_smart,
                 R.drawable.it_nature_iv,
                 R.string.self_smart_description);
 
-        // type 8 : Intrapersonal - self :
+        // type 8 : Intra-personal - self :
         type8 = new IntelligenceTypeModel(
-                R.string.word_smart_title_txt,
+                R.string.word_smart,
                 R.drawable.it_nature_iv,
                 R.string.word_smart_description);
 
         // type 9 : Linguistic :
         type9 = new IntelligenceTypeModel(
-                R.string.existential_title_txt,
+                R.string.Linguistic_smart,
                 R.drawable.it_nature_iv,
                 R.string.existential_smart_description);
 

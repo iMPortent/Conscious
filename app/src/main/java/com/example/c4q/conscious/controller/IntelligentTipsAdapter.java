@@ -8,10 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.model.TipsModel;
-
+import com.example.c4q.conscious.intelligencetips.model.TipsModel;
 import java.util.List;
 
 public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTipsAdapter.ViewHolder> {
@@ -34,7 +32,7 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
 
             type = itemView.findViewById(R.id.type_of_intelligence);
             typeSelected = type.getText().toString();
-            enterChallengesButton = itemView.findViewById(R.id.enter_challenges_button);
+            enterChallengesButton = itemView.findViewById(R.id.enter_intel_type_button);
         }
 
         public void onBind(TipsModel tipsModel) {

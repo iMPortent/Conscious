@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.example.c4q.conscious.smart.ViewInterface;
 
-public class GrowthChallengeController {
+/*public class GrowthChallengeController {
 
     private ViewInterface view;
     private ChallengeDataSource dataSource;
@@ -23,4 +23,4 @@ public class GrowthChallengeController {
                 viewRoot
         );
     }
-}
+} */

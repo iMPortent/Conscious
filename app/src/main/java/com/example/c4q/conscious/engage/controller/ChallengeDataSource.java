@@ -1,6 +1,7 @@
 package com.example.c4q.conscious.engage.controller;
 
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.engage.model.Challenges;
 
 import java.util.ArrayList;
 import java.util.List;
