@@ -120,7 +120,8 @@ public class MainActivity extends FragmentActivity {
         private Fragment[] pages = {
                 new IntelligentTipsFragment(),
                 new HomeFragment(),
-                new SmartFragment()
+                new SmartFragment(),
+                new GrowthChallengeFragment()
 
         };
 
