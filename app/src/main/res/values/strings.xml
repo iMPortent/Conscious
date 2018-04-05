@@ -36,7 +36,7 @@
 
     <!-- used as tags for shared element transitions -->
     <string name="transition_drawable">drawable</string>
-    <string name="transition_message">message</string>
+    <string name="transition_message">challenge_detail</string>
     <string name="transition_time_and_date">date</string>
     <string name="title_toolbar">List Activity</string>
 
@@ -217,6 +217,60 @@
     <string name="word_smart_5_txt">Orally summarize section to another person (friend, parent, etc.)</string>
     <string name="word_smart_6_txt">Re-organize class notes</string>
     <string name="word_smart_7_txt">Orally recite definitions and key concepts</string>
+    <string name="challenge_icon">CHALLENGE</string>
+
+
+    <!-- Intelligence Adapter Strings:-->
+    <string name="intelligent_type_description">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_1_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_2_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_3_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_4_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_5_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_6_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_7_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_8_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+    <string name="it_type_9_txt">Word smart people are good with words, letters, and phrases. You enjoy activities such as reading, playing scrabble or other word games, and having discussions.</string>
+
+    <!-- Intelligence Type Title strings:  -->
+    <string name="it_title_txt">Bodily - Spatial</string>
+    <string name="it_title_txt_2">Musical</string>
+    <string name="it_title_txt_3">Naturalistic</string>
+    <string name="it_title_txt_4">Logical - Mathematical</string>
+    <string name="it_title_txt_5">InterPersonal</string>
+    <string name="it_title_txt_6">Visual - Spatial</string>
+    <string name="it_title_txt_7">IntraPersonal</string>
+    <string name="it_title_txt_8">Verbal Linguistic</string>
+    <string name="it_title_txt_9">Linguistic Smart</string>
+
+    <string name="it_description_txt">Word Smart</string>
+    <string name="it_description_txt_2">Word Smart</string>
+    <string name="it_description_txt_3">Word Smart</string>
+    <string name="it_description_txt_4">Word Smart</string>
+    <string name="it_description_txt_5">Word Smart</string>
+    <string name="it_description_txt_6">Word Smart</string>
+    <string name="it_description_txt_7">Word Smart</string>
+    <string name="it_description_txt_8">Word Smart</string>
+    <string name="it_description_txt_9">Word Smart</string>
+
+
+    <string name="intelligence_type">Intelligence Type </string>
+
+    <!-- Main Activity - update ui screens: -->
+    <string name="tab_1_txt">Tips</string>
+    <string name="tab_2_txt">Home</string>
+    <string name="tab_3_txt">Goals</string>
+    <string name="tab_4_txt">Challenges</string>
+
+
+    <!-- Home Fragment STRINGS: -->
+
+    <!-- Intelligence Type IV:-->
+
+
+
+
+
 
 
     <!-- Intelligence Adapter Strings:-->

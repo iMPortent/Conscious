@@ -15,20 +15,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".views.activities.MainActivity"
+            android:name=".uv.MainActivity"
             tools:ignore="GoogleAppIndexingWarning" />
-        <activity android:name=".views.splash.SplashActivity">
+        <activity android:name=".uv.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.activities.WelcomeActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".views.activities.LoginActivity" />
-        <activity android:name=".ChallengeDetailActivity" />
+        <activity android:name=".uv.RegistrationActivity" />
+        <activity android:name=".uv.LoginActivity" />
+         <!-- <activity android:name=".views.activities.OnboardingActivity" /> -->
+        <activity
+            android:name=".views.activities.OnBoardingActivity"
+            android:label="@string/title_activity_on_boarding" />
         <activity android:name=".views.activities.RegistrationActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".uv.FirstWelcomeActivity"></activity>
+        <activity android:name=".views.activities.OnboardingActivity" />
+        <activity android:name=".ChallengeDetailActivity" />
+        <activity android:name=".engage.growthchallenge.GrowthChallengeFragment"/>
+        <activity android:name=".uv.LoginActivity"/>
+        <activity android:name=".views.activities.OnboardingActivity"/>
+        <activity android:name=".engage.growthchallenge.ChallengeDetailActivity"/>
+
     </application>
 
 </manifest>
