@@ -38,6 +38,8 @@
         <item name="spinBars">true</item>
         <item name="color">@color/colorBackground</item>
     </style>
+
+
     <style name="Text">
         <item name="android:gravity">center_vertical</item>
     </style>

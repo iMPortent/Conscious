@@ -1,14 +1,14 @@
 package com.example.c4q.conscious.views.activities;
 
-import android.os.Bundle;
+import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.os.Bundle;
 import android.util.Log;
-
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.views.fragments.FitnessFragment;
@@ -29,14 +29,9 @@ public class MainActivity extends FragmentActivity {
     TabLayout vPagerIcons;
     ViewPager viewPager;
 
-    private int[] tabIcons = {
+    private int[] tabIcons; // holds drawable images for the tab photos
+    private int[] tabText; // holds drawable txt for the tab text
 
-            R.drawable.home_white,
-            R.drawable.smart_dummy_icon,
-            R.drawable.incentive_dummy_icon,
-            R.drawable.goodie_bag_dummy_icon,
-            R.drawable.favorites_dummy_icon
-    };
 
 
     @Override
@@ -52,6 +47,25 @@ public class MainActivity extends FragmentActivity {
 
         vPagerIcons = findViewById(R.id.pager_header);
         vPagerIcons.setupWithViewPager(viewPager);
+
+
+        // tab icon resources
+        tabIcons = new int[]{
+                R.drawable.ic_extension_white_24dp,
+                R.drawable.ic_home_white_24dp,
+                R.drawable.ic_play_arrow_white_24dp,
+                R.drawable.ic_arrow_upward_white_24dp
+        };
+
+        // tab text resources
+        tabText = new int[]{
+                R.string.tab_1_txt,
+                R.string.tab_2_txt,
+                R.string.tab_3_txt,
+                R.string.tab_4_txt,
+        };
+
+
         setupTabIcons();
 
         database = FirebaseDatabase.getInstance();
@@ -63,18 +77,44 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
         if (viewPager.getCurrentItem() == 0) {
+            // If the user is currently looking at the first step, allow the system to handle the
+            // Back button. This calls finish() on this activity and pops the back stack.
             super.onBackPressed();
         } else {
+            // Otherwise, select the previous step.
             viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
         }
     }
 
 
-    private void setupTabIcons(){
-        vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
-        vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
-        vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+    private void setupTabIcons() {
+        for (int i = 0; i < vPagerIcons.getTabCount(); i++) {
+            TabLayout.Tab tab = vPagerIcons.getTabAt(i);
+            if (tab != null) {
+                try {
+
+                    // adds the icon + text to the tab:
+                    tab.setText(tabIcons[i]);
+                    tab.setIcon(tabText[i]);
+
+
+                } catch (Resources.NotFoundException n) {
+
+                    //  catch for the log
+                    Log.d(TAG, "setupTabIcons: " + n);
+                    Log.d(TAG, "setupTabText: " + n);
+
+                }
+            }
+        }
+
+        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
+        //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
+        //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
+        //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+//        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+
+
     }
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
@@ -85,6 +125,8 @@ public class MainActivity extends FragmentActivity {
                 new InterpersonalFragment(),
                 new SmartFragment(),
                 new FitnessFragment(),
+                new SmartFragment()
+
         };
 
         public ScreenSlidePagerAdapter(FragmentManager fm) {
@@ -93,6 +135,20 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int pos) {
+//            switch(pos) {
+//
+//                case 0:
+//                    return EngageFragment.newInstance(1, "FirstFragment");
+//                case 1:
+//                    return SmartFragment.newInstance(2, "Second Fragment");
+//                case 2:
+//                    return IncentiveFragment.newInstance(3, "Third Fragment");
+//                case 3:
+//                    return GoodieBagFragment.newInstance(4, "Fourth Fragment");
+//                case 4:
+//                    return FavoritesFragment.newInstance(5, "Fifth Fragment");
+//                default: return EngageFragment.newInstance(1, "Default");
+//            }
             return pages[pos];
         }
 

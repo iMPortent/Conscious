@@ -4,40 +4,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Holds the layout for slide 4 -->
+
+    <!-- Holds the layout for slide 1 -->
 
     <LinearLayout
+        android:paddingTop="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <!-- imageview tv-->
         <ImageView
-            android:layout_width="375dp"
-            android:layout_height="250dp"
-            android:src="@drawable/onboarding_screen4_img" />
+            android:id="@+id/welcome_iv"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/intro_img" />
 
+        <!-- title textview -->
         <TextView
+            android:id="@+id/welcome_title_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slide_4_title"
+            android:text="@string/slide_title_txt"
             android:textColor="@android:color/black"
-            android:gravity="center"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/welcome_description_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="@string/slide_4_desc"
+            android:text="@string/slide_description_txt"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/slide_desc" />
 
     </LinearLayout>
+
 
 </RelativeLayout>

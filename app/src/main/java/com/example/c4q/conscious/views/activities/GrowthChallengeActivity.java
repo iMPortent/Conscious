@@ -21,7 +21,7 @@ import com.example.c4q.conscious.model.Challenges;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class GrowthChallengeActivity extends Fragment implements ViewInterface, View.OnClickListener{
+public class GrowthChallengeActivity extends AppCompatActivity implements ViewInterface, View.OnClickListener{
 
     private static final String CHALLENGE_NAME = "CHALLENGE_NAME";
     private static final String CHALLENGE_MESSAGE = "CHALLENGE_MESSAGE";
