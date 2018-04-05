@@ -1,18 +1,28 @@
 package com.example.c4q.conscious.intelligencetips.model;
 
-public class TipsModel {
-    String category;
-    String tip;
+import android.graphics.drawable.Drawable;
 
-    public TipsModel(String category, String tip) {
-        this.category = category;
-        this.tip = tip;
+public class TipsModel {
+
+    String intelligentType;
+    Drawable enterIntelType;
+
+    public TipsModel(String intelligentType, Drawable enterIntelType) {
+        this.intelligentType = intelligentType;
+        this.enterIntelType = enterIntelType;
     }
-    public String getCategory() {
-        return category;
+
+    public TipsModel(String intelligentType) {
+        this.intelligentType = intelligentType;
     }
-    public String getTip() {
-        return tip;
+
+    public String getIntelligentType() {
+        return intelligentType;
     }
+
+    public Drawable getEnterIntelType() {
+        return enterIntelType;
+    }
+
 
 }
