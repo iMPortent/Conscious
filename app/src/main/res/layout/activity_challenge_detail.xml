@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/community_selector"
-    tools:context="com.example.c4q.conscious.ChallengeDetailActivity">
+    tools:context="com.example.c4q.conscious.engage.view.ChallengeDetailActivity">
 
     <ImageView
         android:id="@+id/imv_colored_background"

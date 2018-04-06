@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context="com.example.c4q.conscious.views.activities.MainActivity">
+    tools:context="com.example.c4q.conscious.uv.MainActivity">
 
 
     <!-- main activity toolbar -->
@@ -51,22 +51,8 @@
             app:tabSelectedTextColor="@color/colorElectricBlue"
             app:tabTextColor="@color/colorWhite">
 
-            <ImageView
-                android:id="@+id/main_img_tab"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_home_white_24dp"
-                />
-
-            <TextView
-                android:id="@+id/main_txt_tab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/colorWhite"
-                />
-
         </android.support.design.widget.TabLayout>
+
 
     </android.support.v4.view.ViewPager>
 

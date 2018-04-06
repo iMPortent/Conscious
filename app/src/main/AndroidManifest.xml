@@ -15,23 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".views.activities.MainActivity"
+            android:name=".uv.MainActivity"
             tools:ignore="GoogleAppIndexingWarning" />
-        <activity android:name=".views.splash.SplashActivity">
+        <activity android:name=".uv.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".views.activities.LoginActivity" />
+        <activity android:name=".uv.RegistrationActivity" />
+        <activity android:name=".uv.LoginActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".views.activities.FirstWelcomeActivity" />
-        <activity android:name=".ChallengeDetailActivity" />
+        <activity android:name=".uv.FirstWelcomeActivity"></activity>
+        <activity android:name=".uv.GrowthChallengeActivity"></activity>
+
     </application>
 
 </manifest>

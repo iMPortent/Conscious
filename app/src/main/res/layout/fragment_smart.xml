@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/smart_selector"
-    tools:context="com.example.c4q.conscious.views.fragments.SmartFragment">
+    tools:context="com.example.c4q.conscious.smart.view.SmartFragment">
 
 
     <!-- TODO: Update blank fragment layout -->
