@@ -1,6 +1,5 @@
 package com.example.c4q.conscious.uv;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,16 +9,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.engage.view.ChallengeDetailActivity;
-import com.example.c4q.conscious.engage.view.EngageChallengesActivity;
 import com.example.c4q.conscious.engage.view.EngageFragment;
 import com.example.c4q.conscious.home.views.HomeFragment;
 import com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment;
-import com.example.c4q.conscious.smart.controller.InterpersonalFragment;
 import com.example.c4q.conscious.smart.view.SmartFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -36,8 +30,6 @@ public class MainActivity extends FragmentActivity {
 
     private int[] tabIcons; // holds drawable images for the tab photos
     private int[] tabText; // holds drawable txt for the tab text
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +48,10 @@ public class MainActivity extends FragmentActivity {
 
         // tab icon resources
         tabIcons = new int[]{
-                R.drawable.ic_extension_black_24dp,
                 R.drawable.ic_home_black_24dp,
+                R.drawable.ic_extension_black_24dp,
                 R.drawable.ic_play_arrow_black_24dp,
-                R.drawable.ic_arrow_upward_black_24dp,
-                R.drawable.ic_arrow_upward_black_24dp,
+                R.drawable.ic_arrow_upward_black_24dp
         };
 
         // tab text resources
@@ -68,7 +59,6 @@ public class MainActivity extends FragmentActivity {
                 R.string.tab_1_txt,
                 R.string.tab_2_txt,
                 R.string.tab_3_txt,
-                R.string.tab_4_txt,
                 R.string.tab_4_txt,
         };
 
@@ -96,7 +86,6 @@ public class MainActivity extends FragmentActivity {
 
     private void setupTabIcons() {
         for (int i = 0; i < vPagerIcons.getTabCount(); i++) {
-            Log.d(TAG, "setupTabIcons: " + vPagerIcons.getTabCount());
             TabLayout.Tab tab = vPagerIcons.getTabAt(i);
             if (tab != null) {
                 try {
@@ -116,6 +105,13 @@ public class MainActivity extends FragmentActivity {
             }
         }
 
+        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
+        //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
+        //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
+        //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
+//        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
+
+
     }
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
@@ -123,9 +119,8 @@ public class MainActivity extends FragmentActivity {
         private Fragment[] pages = {
                 new HomeFragment(),
                 new IntelligentTipsFragment(),
-                new InterpersonalFragment(),
                 new EngageFragment(),
-                new SmartFragment()
+                new SmartFragment(),
 
         };
 
@@ -135,6 +130,20 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int pos) {
+//            switch(pos) {
+//
+//                case 0:
+//                    return EngageFragment.newInstance(1, "FirstFragment");
+//                case 1:
+//                    return SmartFragment.newInstance(2, "Second Fragment");
+//                case 2:
+//                    return IncentiveFragment.newInstance(3, "Third Fragment");
+//                case 3:
+//                    return GoodieBagFragment.newInstance(4, "Fourth Fragment");
+//                case 4:
+//                    return FavoritesFragment.newInstance(5, "Fifth Fragment");
+//                default: return EngageFragment.newInstance(1, "Default");
+//            }
             return pages[pos];
         }
 

@@ -46,20 +46,14 @@ public class EngageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        gamesCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intoGamesActivity = new Intent(getActivity(), GameLevelActivity.class);
-                startActivity(intoGamesActivity);
-            }
+        gamesCircle.setOnClickListener(v -> {
+            Intent intoGamesActivity = new Intent(getActivity(), GameLevelActivity.class);
+            startActivity(intoGamesActivity);
         });
 
-        challengesCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intoChallengesActivity = new Intent(getActivity(), GameLevelActivity.class);
-                startActivity(intoChallengesActivity);
-            }
+        challengesCircle.setOnClickListener(v -> {
+            Intent intoChallengesActivity = new Intent(getActivity(), ChallengeLevelActivity.class);
+            startActivity(intoChallengesActivity);
         });
     }
 }

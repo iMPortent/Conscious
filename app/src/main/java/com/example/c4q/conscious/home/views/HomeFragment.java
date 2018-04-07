@@ -81,19 +81,19 @@ public class HomeFragment extends Fragment {
         // type 1 : bodily:
         type1 = new IntelligenceTypeModel(
                 R.string.body_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_body_iv,
                 R.string.body_smart_description);
 
         // type 2 : Existential
         type2 = new IntelligenceTypeModel(
                 R.string.music_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_existential_iv,
                 R.string.music_smart_description);
 
         // type 3 : Musical:
         type3 = new IntelligenceTypeModel(
                 R.string.nature_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_musical_iv,
                 R.string.nature_smart_description);
 
         // type 4 : Naturalist:
@@ -105,31 +105,31 @@ public class HomeFragment extends Fragment {
         // type 5 : Logical- Mathematical:
         type5 = new IntelligenceTypeModel(
                 R.string.people_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_math_iv,
                 R.string.people_smart_description);
 
         // type 6 : Spatial: picture
         type6 = new IntelligenceTypeModel(
                 R.string.picture_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_spatial_iv,
                 R.string.picture_smart_description);
 
         // type 7 : Interpersonal - people :
         type7 = new IntelligenceTypeModel(
                 R.string.self_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_self_iv,
                 R.string.self_smart_description);
 
         // type 8 : Intrapersonal - self :
         type8 = new IntelligenceTypeModel(
                 R.string.word_smart_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_word_iv,
                 R.string.word_smart_description);
 
         // type 9 : Linguistic :
         type9 = new IntelligenceTypeModel(
                 R.string.existential_title_txt,
-                R.drawable.it_nature_iv,
+                R.drawable.it_word_iv,
                 R.string.existential_smart_description);
 
         // add objects to recycler view:
@@ -146,4 +146,6 @@ public class HomeFragment extends Fragment {
 
         return intelligence_type_list;
     }
+
+
 } // ends HomeFragment.java

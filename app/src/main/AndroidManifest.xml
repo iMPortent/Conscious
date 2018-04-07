@@ -37,6 +37,15 @@
         <activity android:name=".engage.view.ChallengesActivity" />
         <activity android:name=".engage.view.GameLevelActivity" />
         <activity android:name=".engage.view.ChallengeLevelActivity"></activity>
+        <activity android:name=".uv.RegistrationActivity" />
+        <activity android:name=".uv.LoginActivity" />
+          <!--<activity android:name=".views.activities.OnboardingActivity" /> -->
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".uv.FirstWelcomeActivity"></activity>
     </application>
 
 </manifest>
