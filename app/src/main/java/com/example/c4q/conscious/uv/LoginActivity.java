@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.c4q.conscious.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -79,13 +78,13 @@ public class LoginActivity extends Activity {
             }
         });
 
-        registration_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentToRegistration = new Intent(LoginActivity.this, com.example.c4q.conscious.views.activities.RegistrationActivity.class);
-                startActivity(intentToRegistration);
-            }
-        });
+//        registration_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentToRegistration = new Intent(LoginActivity.this, RegistrationActivity.class);
+//                startActivity(intentToRegistration);
+//            }
+//        });
 
     }
 

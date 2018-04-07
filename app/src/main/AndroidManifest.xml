@@ -26,24 +26,17 @@
         </activity>
         <activity android:name=".uv.RegistrationActivity" />
         <activity android:name=".uv.LoginActivity" />
-         <!-- <activity android:name=".views.activities.OnboardingActivity" /> -->
-        <activity
-            android:name=".views.activities.OnBoardingActivity"
-            android:label="@string/title_activity_on_boarding" />
-        <activity android:name=".views.activities.RegistrationActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".uv.FirstWelcomeActivity"></activity>
-        <activity android:name=".views.activities.OnboardingActivity" />
-        <activity android:name=".ChallengeDetailActivity" />
-        <activity android:name=".engage.growthchallenge.GrowthChallengeFragment"/>
-        <activity android:name=".uv.LoginActivity"/>
-        <activity android:name=".views.activities.OnboardingActivity"/>
-        <activity android:name=".engage.growthchallenge.ChallengeDetailActivity"/>
-
+        <activity android:name=".uv.FirstWelcomeActivity" />
+        <activity android:name=".engage.view.ChallengeDetailActivity" />
+        <activity android:name=".engage.view.GamesActivity" />
+        <activity android:name=".engage.view.ChallengesActivity" />
+        <activity android:name=".engage.view.GameLevelActivity" />
+        <activity android:name=".engage.view.ChallengeLevelActivity"></activity>
     </application>
 
 </manifest>

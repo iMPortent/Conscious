@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.c4q.conscious.engage.view.ChallengeLevelActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/easyCircle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@color/PINK"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="65dp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mediumCircle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginStart="10dp"
+        android:src="@color/ORANGE"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hardCircle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginStart="10dp"
+        android:src="@color/RED"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+</LinearLayout>

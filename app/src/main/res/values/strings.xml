@@ -122,9 +122,8 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
 
-
     <string name="slide_title_txt">HEADER</string>
-    <string name="slide_description_txt">DESCRIPTIONNNNN </string>
+    <string name="slide_description_txt">DESCRIPTION </string>
 
     <!-- String resource values for IntelligentTipsFragments: -->
 
@@ -266,11 +265,6 @@
     <!-- Home Fragment STRINGS: -->
 
     <!-- Intelligence Type IV:-->
-
-
-
-
-
 
 
 </resources>

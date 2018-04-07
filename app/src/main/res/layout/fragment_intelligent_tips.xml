@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/goodie_bag_selector"
     tools:context="com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment"
     android:orientation="vertical">
@@ -14,9 +13,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/intelligent_tips_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="400dp">
 
+    </android.support.v7.widget.RecyclerView>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circle_image_view"
@@ -24,10 +23,8 @@
         android:layout_height="100dp"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="250dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="50dp"
         android:alpha="0.7"
         tools:src="@drawable/blue_drawable" />
-
-
 
 </LinearLayout>
