@@ -13,9 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.controller.IntelligentTipsAdapter;
+import com.example.c4q.conscious.controller.Intelligent_TipAdapter;
 import com.example.c4q.conscious.intelligencetips.model.TipsModel;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +32,7 @@ public class IntelligentTipsFragment extends Fragment {
     static ImageButton enterChallengesButton;
     static List<TipsModel> rvData;
     static CardView typeOfIntelligenceCard;
+    static TextView intelligentTipsDescription;
 
     @Nullable
     @Override
@@ -37,9 +43,9 @@ public class IntelligentTipsFragment extends Fragment {
         intelligentTipsRv = (RecyclerView) root.findViewById(R.id.intelligent_tips_rv);
         enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_intel_type_button);
         typeOfIntelligenceCard = (CardView) root.findViewById(R.id.card_view_item);
+        intelligentTipsDescription = (TextView) root.findViewById(R.id.intelligent_tips_description);
 
         rvData = new ArrayList<>();
-
         rvData.add( new TipsModel(getResources().getDrawable(R.drawable.it_body_iv)));
         rvData.add( new TipsModel(getResources().getDrawable(R.drawable.it_existential_iv)));
         rvData.add( new TipsModel(getResources().getDrawable(R.drawable.it_musical_iv)));
@@ -56,7 +62,7 @@ public class IntelligentTipsFragment extends Fragment {
 
 
 
-        IntelligentTipsAdapter intelligentTipsAdapter = new IntelligentTipsAdapter(mContext, rvData);
+        Intelligent_TipAdapter intelligentTipsAdapter = new Intelligent_TipAdapter(mContext, rvData);
 
         intelligentTipsRv.setAdapter(intelligentTipsAdapter);
 
@@ -78,7 +84,7 @@ public class IntelligentTipsFragment extends Fragment {
             }
         }); */
 
-        IntelligentTipsAdapter.SpacesItemDecoration decoration = new IntelligentTipsAdapter.SpacesItemDecoration(16);
+        Intelligent_TipAdapter.SpacesItemDecoration decoration = new Intelligent_TipAdapter.SpacesItemDecoration(16);
 
         intelligentTipsRv.addItemDecoration(decoration);
 

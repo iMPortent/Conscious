@@ -1,6 +1,6 @@
 package com.example.c4q.conscious.controller;
 
-import android.content.Context;
+/*import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.media.Image;
@@ -24,34 +24,26 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
     public List<TipsModel> tipsList;
     public Context mContext;
 
-    public IntelligentTipsAdapter(Context c, List<TipsModel> tipsList) {
-        this.mContext = c; this.tipsList = tipsList;
-    }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements OnClickListener{
+    });
+            // open another activity on item click
+            Intent intent = new Intent(mContext, IntelligenceTips2Activity.class);
+            intent.putExtra("image", position); // put image data in Intent
+            mContext.startActivity(intent); // start Intent
 
-        private static final String TAG = "tag";
 
-        // fields:
-        ImageButton enterChallengesButton;
-        String typeSelected;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            enterChallengesButton = itemView.findViewById(R.id.enter_intel_type_button);
-
-        }
-
-        public void onBind(TipsModel tipsModel) {
-            enterChallengesButton.setImageDrawable((tipsModel.getEnterIntelType()));
-        }
-
-        @Override
+    @Override
         public void onClick(View v) {
             Log.d(TAG, "onClick " + getAdapterPosition() + " " + typeSelected);
+
+                Intent startDetail = new Intent(itemView.getContext(), IntelligenceTips2Activity.class);
+                itemView.getContext().startActivity(startDetail);
+            }
         }
+
     }
+
 
     @Override
     public IntelligentTipsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -68,21 +60,6 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
 
         holder.onBind(tipsModel);
         holder.itemView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(mContext, IntelligenceTips2Activity.class);
-                intent.putExtra("image", position); // put image data in Intent
-                mContext.startActivity(intent); // start Intent
-
-            }
-        });
-         /*   // open another activity on item click
-            Intent intent = new Intent(mContext, IntelligenceTips2Activity.class);
-            intent.putExtra("image", position); // put image data in Intent
-            mContext.startActivity(intent); // start Intent*/
-
-
 
 }
 
@@ -110,3 +87,35 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
         }
     }
 }
+public IntelligentTipsAdapter(Context c, List<TipsModel> tipsList) {
+        this.mContext = c; this.tipsList = tipsList;
+        }
+        }
+
+public class ViewHolder extends RecyclerView.ViewHolder implements OnClickListener{
+
+    private static final String TAG = "tag";
+
+    // fields:
+    ImageButton enterChallengesButton;
+    String typeSelected;
+
+    public ViewHolder(View itemView) {
+        super(itemView);
+
+        enterChallengesButton = itemView.findViewById(R.id.enter_intel_type_button);
+
+    }
+
+    public void onBind(TipsModel tipsModel) {
+        enterChallengesButton.setImageDrawable((tipsModel.getEnterIntelType()));
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        Intent intent = new Intent(mContext, IntelligenceTips2Activity.class);
+        intent.putExtra("image", position); // put image data in Intent
+        mContext.startActivity(intent); // start Intent
+
+    } */
