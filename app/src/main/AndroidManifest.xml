@@ -32,7 +32,7 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".uv.FirstWelcomeActivity"></activity>
-        <activity android:name=".uv.GrowthChallengeActivity"></activity>
+        <activity android:name=".engage.view.ChallengeDetailActivity"></activity>
 
     </application>
 

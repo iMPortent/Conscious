@@ -6,11 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.engage.view.GrowthChallengeFragment;
+import com.example.c4q.conscious.engage.view.EngageFragment;
 import com.example.c4q.conscious.intelligencetips.model.TipsModel;
-
 import java.util.List;
 
 public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_Tips_Adapter.ViewHolder> {
@@ -64,9 +62,10 @@ public class Intelligent_Tips_Adapter extends RecyclerView.Adapter<Intelligent_T
 
         }
 
+
         @Override
         public void onClick(View v) {
-            Intent startVivs = new Intent(itemView.getContext(), GrowthChallengeFragment.class);
+            Intent startVivs = new Intent(itemView.getContext(), EngageFragment.class);
             itemView.getContext().startActivity(startVivs);
         }
     }

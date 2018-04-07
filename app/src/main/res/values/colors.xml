@@ -31,4 +31,9 @@
     <color name="BLUE">#0000FF</color>
     <color name="GREEN">#00FF00</color>
     <color name="YELLOW">#FFEB3B</color>
+    <color name="PURPLE">#934866</color>
+    <color name="SKY">#31E9EC</color>
+    <color name="ORANGE">#FC6509</color>
+    <color name="PINK">#FE8698</color>
+
 </resources>

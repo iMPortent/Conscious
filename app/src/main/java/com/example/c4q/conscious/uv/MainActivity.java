@@ -1,5 +1,6 @@
 package com.example.c4q.conscious.uv;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,9 +10,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.engage.view.GrowthChallengeFragment;
+import com.example.c4q.conscious.engage.view.ChallengeDetailActivity;
+import com.example.c4q.conscious.engage.view.EngageFragment;
 import com.example.c4q.conscious.home.views.HomeFragment;
 import com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment;
 import com.example.c4q.conscious.smart.controller.InterpersonalFragment;
@@ -113,13 +117,18 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    public void whenChallengedClicked(View view) {
+        Intent toDetailActivity = new Intent(this, ChallengeDetailActivity.class);
+        startActivity(toDetailActivity);
+    }
+
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
                 new HomeFragment(),
                 new IntelligentTipsFragment(),
                 new InterpersonalFragment(),
-                new GrowthChallengeFragment(),
+                new EngageFragment(),
                 new SmartFragment()
 
         };

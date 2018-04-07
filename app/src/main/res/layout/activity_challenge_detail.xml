@@ -13,8 +13,6 @@
         android:layout_above="@+id/div_center"
         android:transitionName="@string/transition_drawable" />
 
-
-
     <TextView
         android:id="@+id/challenge_name"
         style="@style/Text.Primary"
