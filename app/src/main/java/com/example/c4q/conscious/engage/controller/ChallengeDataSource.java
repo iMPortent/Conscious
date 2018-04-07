@@ -80,12 +80,14 @@ public class ChallengeDataSource implements ChallengeDataSourceInterface {
     }
 
     @Override
-    public void deleteChallenge(Challenges challenges) {
+    public void insertChallenge(Challenges challenges) {
 
     }
 
     @Override
-    public void insertChallenge(Challenges temporaryChallenge) {
+    public void deleteChallenge(Challenges challenges) {
 
     }
+
+
 }

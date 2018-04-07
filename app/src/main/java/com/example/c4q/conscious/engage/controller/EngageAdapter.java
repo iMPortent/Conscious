@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.engage.view;
+package com.example.c4q.conscious.engage.controller;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.engage.view.EngageDataModel;
+
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 

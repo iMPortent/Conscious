@@ -1,4 +1,4 @@
-package com.example.c4q.conscious.controller;
+package com.example.c4q.conscious.intelligencetips.controller;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -6,10 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.intelligencetips.model.TipsModel;
+
 import java.util.List;
 
 public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTipsAdapter.ViewHolder> {
@@ -51,7 +52,7 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
     }
 
     @Override
-    public IntelligentTipsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View childView = LayoutInflater.from(parent.getContext()).inflate(R.layout.intelligent_tips_item_view, parent, false);
 
@@ -59,7 +60,7 @@ public class IntelligentTipsAdapter extends RecyclerView.Adapter<IntelligentTips
     }
 
     @Override
-    public void onBindViewHolder(IntelligentTipsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
         TipsModel tipsModel = tipsList.get(position);
 

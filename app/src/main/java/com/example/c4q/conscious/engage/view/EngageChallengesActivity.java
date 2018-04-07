@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.engage.controller.EngageAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 

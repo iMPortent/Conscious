@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
+import com.example.c4q.conscious.engage.view.EngageFragment;
 import com.example.c4q.conscious.home.views.HomeFragment;
 import com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment;
 import com.example.c4q.conscious.smart.view.SmartFragment;
@@ -121,7 +122,7 @@ public class MainActivity extends FragmentActivity {
                 new IntelligentTipsFragment(),
                 new HomeFragment(),
                 new SmartFragment(),
-                new GrowthChallengeFragment()
+                new EngageFragment()
 
         };
 
