@@ -12,8 +12,8 @@ import android.util.Log;
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.home.views.HomeFragment;
-import com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment;
 import com.example.c4q.conscious.smart.view.SmartFragment;
+import com.example.c4q.conscious.views.fragments.IntelligentTipsFragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
