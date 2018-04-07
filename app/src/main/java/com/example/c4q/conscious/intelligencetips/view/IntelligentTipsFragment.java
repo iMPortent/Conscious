@@ -13,14 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.controller.IntelligentTipsAdapter;
-import com.example.c4q.conscious.model.TipsModel;
-
+import com.example.c4q.conscious.intelligencetips.model.TipsModel;
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class IntelligentTipsFragment extends Fragment {
 
@@ -38,19 +35,15 @@ public class IntelligentTipsFragment extends Fragment {
          View root = inflater.inflate(R.layout.fragment_intelligent_tips, container, false);
 
         mContext = getContext();
-
         intelligentTipsRv = (RecyclerView) root.findViewById(R.id.intelligent_tips_rv);
-
         enterChallengesButton = (ImageButton) root.findViewById(R.id.enter_intel_type_button);
-
         intelligenceType = (TextView) root.findViewById(R.id.type_of_intelligence);
-
         typeOfIntelligenceCard = (CardView) root.findViewById(R.id.card_view_item);
 
         rvData = new ArrayList<>();
 
         rvData.add( new TipsModel(getString(R.string.body_smart),getResources().getDrawable(R.drawable.it_body_iv)));
-        rvData.add( new TipsModel(getString(R.string.existential),getResources().getDrawable(R.drawable.it_existential_iv)));
+        rvData.add( new TipsModel(getString(R.string.Linguistic_smart),getResources().getDrawable(R.drawable.it_existential_iv)));
         rvData.add( new TipsModel(getString(R.string.music_smart),getResources().getDrawable(R.drawable.it_musical_iv)));
         rvData.add( new TipsModel(getString(R.string.nature_smart),getResources().getDrawable(R.drawable.it_nature_iv)));
         rvData.add( new TipsModel(getString(R.string.number_smart),getResources().getDrawable(R.drawable.it_math_iv)));
@@ -58,9 +51,6 @@ public class IntelligentTipsFragment extends Fragment {
         rvData.add( new TipsModel(getString(R.string.picture_smart),getResources().getDrawable(R.drawable.it_spatial_iv)));
         rvData.add( new TipsModel(getString(R.string.self_smart),getResources().getDrawable(R.drawable.it_self_iv)));
         rvData.add( new TipsModel(getString(R.string.word_smart),getResources().getDrawable(R.drawable.it_word_iv)));
-
-
-              //  gridLayoutManager = new GridLayoutManager(mContext, , false);
 
         intelligentTipsRv.setLayoutManager( new GridLayoutManager(mContext, 3));
 
