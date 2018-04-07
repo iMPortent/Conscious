@@ -21,10 +21,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class EngageFragment extends Fragment {
 
-    private CircleImageView gamesCircle;
-    private CircleImageView challengesCircle;
-    private TextView gamesTv;
-    private TextView challengesTv;
+    private ImageView gamesCircle;
+    private ImageView challengesCircle;
     private ImageView engageIcon;
 
     public EngageFragment() {
@@ -37,10 +35,8 @@ public class EngageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_engage, container, false);
-        gamesCircle = view.findViewById(R.id.gamesCircle);
-        challengesCircle = view.findViewById(R.id.challengesCircle);
-        gamesTv = view.findViewById(R.id.games);
-        challengesTv = view.findViewById(R.id.challenges);
+        gamesCircle = view.findViewById(R.id.games_btn);
+        challengesCircle = view.findViewById(R.id.challenges_btn);
         engageIcon = view.findViewById(R.id.engage_icon);
         return view;
 
