@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.c4q.conscious.R;
 
@@ -11,9 +12,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class GameLevelActivity extends AppCompatActivity {
 
-    CircleImageView easyCircle;
-    CircleImageView mediumCircle;
-    CircleImageView hardCircle;
+    ImageView easyCircle;
+    ImageView mediumCircle;
+    ImageView hardCircle;
 
 
     @Override
@@ -21,32 +22,23 @@ public class GameLevelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
 
-        easyCircle = findViewById(R.id.easyCircle);
-        mediumCircle = findViewById(R.id.mediumCircle);
-        hardCircle = findViewById(R.id.hardCircle);
+        easyCircle = findViewById(R.id.easy_btn);
+        mediumCircle = findViewById(R.id.medium_btn);
+        hardCircle = findViewById(R.id.hard_btn);
 
-        easyCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
-                startActivity(toGameLevel);
-            }
+        easyCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
+            startActivity(toGameLevel);
         });
 
-        mediumCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
-                startActivity(toGameLevel);
-            }
+        mediumCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
+            startActivity(toGameLevel);
         });
 
-        hardCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
-                startActivity(toGameLevel);
-            }
+        hardCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(GameLevelActivity.this, GamesActivity.class);
+            startActivity(toGameLevel);
         });
     }
 }

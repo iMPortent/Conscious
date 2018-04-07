@@ -31,8 +31,6 @@ public class MainActivity extends FragmentActivity {
     private int[] tabIcons; // holds drawable images for the tab photos
     private int[] tabText; // holds drawable txt for the tab text
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +48,8 @@ public class MainActivity extends FragmentActivity {
 
         // tab icon resources
         tabIcons = new int[]{
-                R.drawable.ic_extension_black_24dp,
                 R.drawable.ic_home_black_24dp,
+                R.drawable.ic_extension_black_24dp,
                 R.drawable.ic_play_arrow_black_24dp,
                 R.drawable.ic_arrow_upward_black_24dp
         };
@@ -107,22 +105,15 @@ public class MainActivity extends FragmentActivity {
             }
         }
 
-        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
-        //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
-        //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
-        //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
-//        vPagerIcons.getTabAt(4).setIcon(tabIcons[4]);
-
-
     }
 
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {
-                new IntelligentTipsFragment(),
                 new HomeFragment(),
+                new IntelligentTipsFragment(),
+                new EngageFragment(),
                 new SmartFragment(),
-                new EngageFragment()
 
         };
 
@@ -132,20 +123,7 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int pos) {
-//            switch(pos) {
-//
-//                case 0:
-//                    return EngageFragment.newInstance(1, "FirstFragment");
-//                case 1:
-//                    return SmartFragment.newInstance(2, "Second Fragment");
-//                case 2:
-//                    return IncentiveFragment.newInstance(3, "Third Fragment");
-//                case 3:
-//                    return GoodieBagFragment.newInstance(4, "Fourth Fragment");
-//                case 4:
-//                    return FavoritesFragment.newInstance(5, "Fifth Fragment");
-//                default: return EngageFragment.newInstance(1, "Default");
-//            }
+
             return pages[pos];
         }
 
