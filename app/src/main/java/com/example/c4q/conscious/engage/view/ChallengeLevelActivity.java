@@ -3,10 +3,7 @@ package com.example.c4q.conscious.engage.view;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-
 import com.example.c4q.conscious.R;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChallengeLevelActivity extends AppCompatActivity {
@@ -24,28 +21,19 @@ public class ChallengeLevelActivity extends AppCompatActivity {
         mediumCircle = findViewById(R.id.mediumCircle);
         hardCircle = findViewById(R.id.hardCircle);
 
-        easyCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
-                startActivity(toGameLevel);
-            }
+        easyCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
+            startActivity(toGameLevel);
         });
 
-        mediumCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
-                startActivity(toGameLevel);
-            }
+        mediumCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
+            startActivity(toGameLevel);
         });
 
-        hardCircle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
-                startActivity(toGameLevel);
-            }
+        hardCircle.setOnClickListener(v -> {
+            Intent toGameLevel = new Intent(ChallengeLevelActivity.this, ChallengesActivity.class);
+            startActivity(toGameLevel);
         });
     }
 }
