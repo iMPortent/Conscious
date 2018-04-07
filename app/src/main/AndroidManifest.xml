@@ -14,9 +14,7 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".uv.MainActivity"
-            tools:ignore="GoogleAppIndexingWarning" />
+
         <activity android:name=".uv.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,18 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".uv.RegistrationActivity" />
-        <activity android:name=".uv.LoginActivity" />
-        <!-- <activity android:name=".views.activities.OnboardingActivity" /> -->
+
+        <activity
+            android:name=".uv.MainActivity"
+            tools:ignore="GoogleAppIndexingWarning" />
+
+        <!-- -->
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".uv.FirstWelcomeActivity" />
         <activity
             android:name=".views.activities.IntelligenceTips2Activity"
-            android:label="@string/title_activity_intelligence_tips2"></activity>
+            android:label="@string/title_activity_intelligence_tips2">
+
+        </activity>
     </application>
 
 </manifest>

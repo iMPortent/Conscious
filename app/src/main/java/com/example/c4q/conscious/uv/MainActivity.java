@@ -93,8 +93,10 @@ public class MainActivity extends FragmentActivity {
                 try {
 
                     // adds the icon + text to the tab:
-                    tab.setText(tabIcons[i]);
-                    tab.setIcon(tabText[i]);
+                    tab.setText(tabText[i]);
+                    tab.setIcon(tabIcons[i]);
+
+                    vPagerIcons.getTabAt(i).setIcon(tabIcons[0]).setText(tabIcons[i]);;
 
 
                 } catch (Resources.NotFoundException n) {
@@ -107,7 +109,6 @@ public class MainActivity extends FragmentActivity {
             }
         }
 
-        //vPagerIcons.getTabAt(0).setIcon(tabIcons[0]);
         //vPagerIcons.getTabAt(1).setIcon(tabIcons[1]);
         //vPagerIcons.getTabAt(2).setIcon(tabIcons[2]);
         //vPagerIcons.getTabAt(3).setIcon(tabIcons[3]);
