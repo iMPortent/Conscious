@@ -40,7 +40,7 @@ public class EngageAdapter extends RecyclerView.Adapter<EngageAdapter.EngageView
         return engageDataList.size();
     }
 
-    public class EngageViewHolder extends RecyclerView.ViewHolder {
+    public static class EngageViewHolder extends RecyclerView.ViewHolder {
 
         CardView challengeCardView;
         CircleImageView challengeIcon;

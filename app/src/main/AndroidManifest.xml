@@ -31,9 +31,12 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".uv.FirstWelcomeActivity"></activity>
-        <activity android:name=".engage.view.ChallengeDetailActivity"></activity>
-
+        <activity android:name=".uv.FirstWelcomeActivity" />
+        <activity android:name=".engage.view.ChallengeDetailActivity" />
+        <activity android:name=".engage.view.GamesActivity" />
+        <activity android:name=".engage.view.ChallengesActivity" />
+        <activity android:name=".engage.view.GameLevelActivity" />
+        <activity android:name=".engage.view.ChallengeLevelActivity"></activity>
     </application>
 
 </manifest>

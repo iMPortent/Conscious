@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.c4q.conscious.R;
-import com.example.c4q.conscious.engage.view.EngageFragment;
+import com.example.c4q.conscious.engage.view.EngageChallengesActivity;
 import com.example.c4q.conscious.intelligencetips.model.TipsModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -102,7 +102,7 @@ public class IntelligentTipsFragment extends Fragment {
 //        intelligentTipsRv.setLayoutManager(new LinearLayoutManager(getContext()));
 
         challenge_circle.setOnClickListener(v -> {
-            Intent intentToChallenges = new Intent(getActivity(), EngageFragment.class);
+            Intent intentToChallenges = new Intent(getActivity(), EngageChallengesActivity.class);
             startActivity(intentToChallenges);
         });
         return root;

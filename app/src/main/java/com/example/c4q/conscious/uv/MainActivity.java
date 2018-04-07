@@ -15,6 +15,7 @@ import android.view.View;
 import com.eftimoff.viewpagertransformers.DrawFromBackTransformer;
 import com.example.c4q.conscious.R;
 import com.example.c4q.conscious.engage.view.ChallengeDetailActivity;
+import com.example.c4q.conscious.engage.view.EngageChallengesActivity;
 import com.example.c4q.conscious.engage.view.EngageFragment;
 import com.example.c4q.conscious.home.views.HomeFragment;
 import com.example.c4q.conscious.intelligencetips.view.IntelligentTipsFragment;

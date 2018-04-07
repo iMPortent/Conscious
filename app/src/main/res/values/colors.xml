@@ -35,5 +35,7 @@
     <color name="SKY">#31E9EC</color>
     <color name="ORANGE">#FC6509</color>
     <color name="PINK">#FE8698</color>
+    <color name="GAMES">#3CE0C0</color>
+    <color name="CHALLENGES">#3F51B5</color>
 
 </resources>

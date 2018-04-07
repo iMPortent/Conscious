@@ -2,15 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.c4q.conscious.engage.view.EngageFragment">
 
-           <android.support.v7.widget.RecyclerView
-               android:id="@+id/challenge_recycler_view"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               >
+    <ImageView
+        android:id="@+id/engage_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/engage_icon"
+        android:layout_marginTop="95dp"
+        android:layout_marginStart="150dp"/>
 
-           </android.support.v7.widget.RecyclerView>
+    <!-- TODO: Update blank fragment layout -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gamesCircle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginStart="130dp"
+        android:src="@drawable/games_drawable"
+        >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="265dp"
+        android:layout_marginStart="145dp"
+        android:text="GAMES"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/challengesCircle"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="130dp"
+        android:src="@drawable/challenge_drawable"
+        >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/challenges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="125dp"
+        android:text="CHALLENGES"/>
 
 </FrameLayout>
