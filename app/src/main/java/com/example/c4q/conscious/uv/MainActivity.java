@@ -118,11 +118,6 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-    public void whenChallengedClicked(View view) {
-        Intent toDetailActivity = new Intent(this, ChallengeDetailActivity.class);
-        startActivity(toDetailActivity);
-    }
-
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
         private Fragment[] pages = {

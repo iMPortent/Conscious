@@ -1,9 +1,11 @@
 package com.example.c4q.conscious.engage.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.example.c4q.conscious.R;
 
@@ -29,6 +31,7 @@ public class GamesActivity extends AppCompatActivity {
         // adapter:
         EngageAdapter adapter = new EngageAdapter(engageDataModel);
         recyclerView.setAdapter(adapter);
+
 
     }
 
@@ -119,8 +122,12 @@ public class GamesActivity extends AppCompatActivity {
         challengeDataList.add(type8);
         challengeDataList.add(type9);
 
-
         return challengeDataList;
 
+    }
+
+    public void onClick(View v) {
+        Intent toDetail = new Intent(GamesActivity.this, ChallengeDetailActivity.class);
+        startActivity(toDetail);
     }
 }
